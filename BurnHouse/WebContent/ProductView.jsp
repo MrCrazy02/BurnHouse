@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html>
 <%@ page contentType="text/html; charset=UTF-8" import="java.util.*,model.ProductBean"%>
-<%@ page import="java.io.OutputStream" %>
+
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -52,7 +52,7 @@
 		<a href="Dettagli.jsp?id=<%=bean.getCode()%>" target="_blank">
   		<img src="${pageContext.request.contextPath}/Images/<%=bean.getImg() %>" alt="<%=bean.getName() %>" style="width:100%"></a>
  			<div class="btn-container">
-  				 <button class="btn">Aggiungi al carrello</button>
+  				 <a href="CartController?action=addCart&id=<%=bean.getCode()%>"><button class="btn" >Aggiungi al carrello</button></a>
   			</div>
   	</div>
   <hr> <!-- Aggiungi una linea orizzontale come divisore -->
