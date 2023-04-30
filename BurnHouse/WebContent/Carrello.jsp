@@ -10,6 +10,7 @@
 <body>
 <%Carrello cart=(Carrello)request.getSession().getAttribute("cart"); %>
 <center><h1>Carrello Utente</h1></center>
+<% if(cart!=null){ %>
 <br>
 <table border=1>
 <tr>
@@ -24,10 +25,11 @@ while(!cart.GetCart().isEmpty()){
 <td><%=order.GetNome() %></td>
 <td><%=order.GetPrezzo()%></td>
 <td><%=order.GetQuantita()%><a href="/CartController?action=Increment&index=<%=i%>">+</a>
-<br><a href="/CartController?action=Decrement&index=<%=i%>">-</td>	
+<br><a href="/CartController?action=Decrement&index=<%=i%>">-</a></td>	
 </tr>
 <%} %>
 </table>
-
+<%}else %>
+<center>Carrello vuoto, aggiungi qualcosa</center>
 </body>
 </html>
