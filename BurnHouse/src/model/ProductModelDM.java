@@ -248,24 +248,126 @@ public class ProductModelDM implements ProductModel {
 
 	@Override
 	public Collection<ProductBean> doRetrieveByVino() throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		Collection<ProductBean> products = new LinkedList<ProductBean>();
+		
+
+		String selectSQL = "SELECT * FROM " + ProductModelDM.TABLE_NAME + " WHERE TIPO = 'vino'";
+
+		try {
+			connection = DriverManagerConnectionPool.getConnection();
+			preparedStatement = connection.prepareStatement(selectSQL);
+
+			ResultSet rs = preparedStatement.executeQuery();
+
+			while (rs.next()) {
+				ProductBean bean = new ProductBean();
+				
+				bean.setCode(rs.getInt("codice"));
+				bean.setName(rs.getString("nome"));
+				bean.setPrice(rs.getDouble("prezzo"));
+				bean.setDescription(rs.getString("descrizione"));
+				bean.setDegree(rs.getFloat("gradazione"));
+				bean.setType(rs.getString("tipo"));
+				bean.setImg(rs.getString("img"));
+				products.add(bean);
+			}
+
+		} finally {
+			try {
+				if (preparedStatement != null)
+					preparedStatement.close();
+			} finally {
+				if (connection != null)
+					connection.close();
+			}
+		}
+		return products;
 	}
 
 
 
 	@Override
 	public Collection<ProductBean> doRetrieveByDistillato() throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		Collection<ProductBean> products = new LinkedList<ProductBean>();
+		
+
+		String selectSQL = "SELECT * FROM " + ProductModelDM.TABLE_NAME + " WHERE TIPO = 'distillato'";
+
+		try {
+			connection = DriverManagerConnectionPool.getConnection();
+			preparedStatement = connection.prepareStatement(selectSQL);
+
+			ResultSet rs = preparedStatement.executeQuery();
+
+			while (rs.next()) {
+				ProductBean bean = new ProductBean();
+				
+				bean.setCode(rs.getInt("codice"));
+				bean.setName(rs.getString("nome"));
+				bean.setPrice(rs.getDouble("prezzo"));
+				bean.setDescription(rs.getString("descrizione"));
+				bean.setDegree(rs.getFloat("gradazione"));
+				bean.setType(rs.getString("tipo"));
+				bean.setImg(rs.getString("img"));
+				products.add(bean);
+			}
+
+		} finally {
+			try {
+				if (preparedStatement != null)
+					preparedStatement.close();
+			} finally {
+				if (connection != null)
+					connection.close();
+			}
+		}
+		return products;
 	}
 
 
 
 	@Override
 	public Collection<ProductBean> doRetrieveByLiquore() throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		Collection<ProductBean> products = new LinkedList<ProductBean>();
+		
+
+		String selectSQL = "SELECT * FROM " + ProductModelDM.TABLE_NAME + " WHERE TIPO = 'liquore'";
+
+		try {
+			connection = DriverManagerConnectionPool.getConnection();
+			preparedStatement = connection.prepareStatement(selectSQL);
+
+			ResultSet rs = preparedStatement.executeQuery();
+
+			while (rs.next()) {
+				ProductBean bean = new ProductBean();
+				
+				bean.setCode(rs.getInt("codice"));
+				bean.setName(rs.getString("nome"));
+				bean.setPrice(rs.getDouble("prezzo"));
+				bean.setDescription(rs.getString("descrizione"));
+				bean.setDegree(rs.getFloat("gradazione"));
+				bean.setType(rs.getString("tipo"));
+				bean.setImg(rs.getString("img"));
+				products.add(bean);
+			}
+
+		} finally {
+			try {
+				if (preparedStatement != null)
+					preparedStatement.close();
+			} finally {
+				if (connection != null)
+					connection.close();
+			}
+		}
+		return products;
 	}
 
 }

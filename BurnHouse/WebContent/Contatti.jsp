@@ -10,5 +10,6 @@
 	<jsp:include page="Header.jsp" />
 	<hr>
 	<p>PAGINA IN FASE DI SVILUPPO</p>
+	<jsp:include page="Footer.jsp" />
 </body>
 </html>

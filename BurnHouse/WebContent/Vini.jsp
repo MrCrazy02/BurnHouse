@@ -36,7 +36,7 @@
   	<a href="Modifica.jsp?id=<%=bean.getCode()%>" target="_blank"><button>Modifica</button></a><br>  
 </div>
 <% } %>
-
+	<jsp:include page="Footer.jsp" />
 </body>
 </html>
 

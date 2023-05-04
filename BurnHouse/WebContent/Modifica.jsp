@@ -65,6 +65,7 @@
 
 		<input type="submit" value="Aggiungi"><input type="reset" value="Reset">
 	</form>
+	<jsp:include page="Footer.jsp" />
 </body>
 </html>
 <% 

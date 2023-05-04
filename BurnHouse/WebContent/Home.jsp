@@ -14,6 +14,6 @@
     <h1>Benvenuti sulla homepage del sito</h1>
     <p>Questa è una pagina di esempio per la homepage del sito.</p>
   </main>
-  
+  <jsp:include page="Footer.jsp" />
 </body>
 </html>
