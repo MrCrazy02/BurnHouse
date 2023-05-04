@@ -82,7 +82,7 @@ public class ProductControl extends HttpServlet {
 						String imageFileName=file.getSubmittedFileName();
 						System.out.println("Immagine selezionata: "+imageFileName);
 						
-						String uploadPath="C:/Users/matte/eclipse-workspace/BurnHouse/WebContent/Images/"+imageFileName;
+						String uploadPath="C:/Users/matte/git/repository/BurnHouse/WebContent/Images/"+imageFileName;
 						System.out.println("Upload Path: "+uploadPath);
 					
 						
@@ -127,7 +127,7 @@ public class ProductControl extends HttpServlet {
 						String imageFileName=file.getSubmittedFileName();
 						System.out.println("Immagine selezionata: "+imageFileName);
 						
-						String uploadPath="C:/Users/matte/eclipse-workspace/BurnHouse/WebContent/Images/"+imageFileName;
+						String uploadPath="C:/Users/matte/git/repository/BurnHouse/WebContent/Images/"+imageFileName;
 						System.out.println("Upload Path: "+uploadPath);
 					
 						
