@@ -8,7 +8,7 @@
    </head>
 
    <body>
-   <jsp:include page = "header.jsp"/>
+   <jsp:include page = "Header.jsp"/>
    
    <div id = "page-title">
       <h1>Come ordinare</h1>
