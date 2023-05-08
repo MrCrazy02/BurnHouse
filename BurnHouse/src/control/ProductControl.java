@@ -17,7 +17,6 @@ import javax.servlet.http.Part;
 
 import model.ProductBean;
 import model.ProductModel;
-import model.ProductModelDM;
 import model.ProductModelDS;
 
 
@@ -30,17 +29,10 @@ public class ProductControl extends HttpServlet {
 
 	// ProductModelDS usa il DataSource
 	// ProductModelDM usa il DriverManager	
-	static boolean isDataSource = true;
 	
-	static ProductModel model;
 	
-	static {
-		if (isDataSource) {
-			model = new ProductModelDS();
-		} else {
-			model = new ProductModelDM();
-		}
-	}
+	static ProductModel model = new ProductModelDS();
+	
 	
 	public ProductControl() {
 		super();
