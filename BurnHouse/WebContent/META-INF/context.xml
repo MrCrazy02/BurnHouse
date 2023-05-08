@@ -6,7 +6,7 @@
         driverClassName="com.mysql.cj.jdbc.Driver"
         type="javax.sql.DataSource"
         username="root"
-        password="Cancello1@"
+        password="Gio210302DVK"
         url="jdbc:mysql://localhost:3306/burn_house?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
         
 </Context>

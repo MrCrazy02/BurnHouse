@@ -17,7 +17,6 @@ import javax.servlet.http.Part;
 
 import model.ProductBean;
 import model.ProductModel;
-import model.ProductModelDM;
 import model.ProductModelDS;
 
 
@@ -32,15 +31,9 @@ public class ProductControl extends HttpServlet {
 	// ProductModelDM usa il DriverManager	
 	static boolean isDataSource = true;
 	
-	static ProductModel model;
+	static ProductModelDS model=new ProductModelDS();
+
 	
-	static {
-		if (isDataSource) {
-			model = new ProductModelDS();
-		} else {
-			model = new ProductModelDM();
-		}
-	}
 	
 	public ProductControl() {
 		super();
@@ -82,7 +75,7 @@ public class ProductControl extends HttpServlet {
 						String imageFileName=file.getSubmittedFileName();
 						System.out.println("Immagine selezionata: "+imageFileName);
 						
-						String uploadPath="C:/Users/matte/git/repository/BurnHouse/WebContent/Images/"+imageFileName;
+						String uploadPath="C:/Users/Utente/git/BurnHouse/BurnHouse/WebContent/Images/"+imageFileName;
 						System.out.println("Upload Path: "+uploadPath);
 					
 						
@@ -127,7 +120,7 @@ public class ProductControl extends HttpServlet {
 						String imageFileName=file.getSubmittedFileName();
 						System.out.println("Immagine selezionata: "+imageFileName);
 						
-						String uploadPath="C:/Users/matte/git/repository/BurnHouse/WebContent/Images/"+imageFileName;
+						String uploadPath="C:/Users/Utente/git/BurnHouse/BurnHouse/WebContent/Images/"+imageFileName;
 						System.out.println("Upload Path: "+uploadPath);
 					
 						
