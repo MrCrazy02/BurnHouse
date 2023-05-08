@@ -59,7 +59,6 @@
       </em>
    </strong>
       <p>
-   
       Se sono stati selezionati tutti i prodotti che si desiderano acquistare, controllare che questi siano corretti. 
       In caso i prodotti siano giusti, cliccare sul tasto “PROCEDI”, oppure su “CONTINUA L’ACQUISTO” in caso si voglia 
       continuare a visionare il sito.
