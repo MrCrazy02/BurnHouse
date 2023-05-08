@@ -32,7 +32,7 @@ public class ProductControl extends HttpServlet {
 	
 	
 	static ProductModel model = new ProductModelDS();
-	
+	//PROVIAMO IL COMMIT
 	
 	public ProductControl() {
 		super();
