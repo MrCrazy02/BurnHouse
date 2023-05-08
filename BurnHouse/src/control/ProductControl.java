@@ -33,7 +33,7 @@ public class ProductControl extends HttpServlet {
 	
 	static ProductModel model = new ProductModelDS();
 	
-	//uhihi
+	
 	public ProductControl() {
 		super();
 	}
