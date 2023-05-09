@@ -8,7 +8,7 @@
    </head>
 
    <body>
-   <jsp:include page = "Header.jsp"/>
+   <jsp:include page = "header.jsp"/>
    
    <div id = "page-title">
       <h1>Come ordinare</h1>
@@ -97,6 +97,6 @@
       </p>
    </div>
    
-   <jsp:include page = "Footer.jsp"/>
+   <jsp:include page = "footer.jsp"/>
    </body>
 </html>
