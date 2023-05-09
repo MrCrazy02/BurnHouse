@@ -21,7 +21,7 @@ public class LogoutServlet extends HttpServlet {
 		request.getSession().removeAttribute("adminRoles");
 		request.getSession().invalidate();
 		
-		String redirectedPage = "Home.jsp";
+		String redirectedPage = "/Home.jsp";
 		response.sendRedirect(request.getContextPath() + redirectedPage);	
 	}
 

@@ -33,7 +33,7 @@
         <%if(ad==null){ %>
           <a href="Login.jsp" title="Accedi">Accedi</a>
           <%}else{ %>
-          <a href="/LogoutServlet" title="Logout">Esci</a>
+          <a href="LogoutServlet" title="Logout">Esci</a>
           <%} %>
           <a href="Carrello.jsp" title="Carrello">Carrello</a>
           

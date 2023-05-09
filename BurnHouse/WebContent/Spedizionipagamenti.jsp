@@ -8,7 +8,7 @@
    </head>
 
    <body>
-   <jsp:include page = "header.jsp"/>
+   <jsp:include page = "Header.jsp"/>
    
    <div id = "page-title">
       <h1>Spedizione e pagamenti</h1>
@@ -48,6 +48,6 @@
    
    </div>
    
-   <jsp:include page = "footer.jsp"/>
+   <jsp:include page = "Footer.jsp"/>
    </body>
 </html>
