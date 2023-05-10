@@ -18,7 +18,7 @@
       <header>
         <div id="zonaleft">
         <a href="Home.jsp">
-          <img id="headerLogo"src="Images/logog.png" alt="Burn House header logo image">
+          <img id="headerLogo"src="Images/logop.png" alt="Burn House header logo image">
         </a>
         </div>
   
