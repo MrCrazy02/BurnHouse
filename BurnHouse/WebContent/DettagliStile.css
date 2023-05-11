@@ -86,7 +86,7 @@ html, body {
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
-  background-color: #E53935;
+  background-color: #751f3d;
   border-radius: 4px;
   font-size: 16px;
   color: #FFFFFF;
@@ -95,5 +95,5 @@ html, body {
   transition: background-color 0.3s ease;
 }
 .cart-btn:hover {
-  background-color: #C62828;
+  background-color: #751f3d;
 }

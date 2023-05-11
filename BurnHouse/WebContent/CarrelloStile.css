@@ -79,7 +79,7 @@ a:hover {
   text-decoration: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: #E53935;
+  background-color: #751f3d;
   color: #FFFFFF;
   border: none;
   transition: background-color 0.3s ease;
@@ -88,7 +88,7 @@ a:hover {
 }
 
 .button:hover{
-	 background-color: #C62828;
+	 background-color: #751f3d;
 }
 
 body {
