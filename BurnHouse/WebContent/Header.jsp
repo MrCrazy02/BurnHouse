@@ -18,7 +18,7 @@
       <header>
         <div id="zonaleft">
         <a href="Home.jsp">
-          <img id="headerLogo"src="Images/logog.png" alt="Burn House header logo image">
+          <img id="headerLogo"src="Immagini/logog.png" alt="Burn House header logo image">
         </a>
         </div>
   
@@ -31,7 +31,7 @@
   
         <div id="zonaright">
         <%if(ad==null){ %>
-          <a href="Login.jsp" title="Accedi">Accedi</a>
+          <a href="Access.jsp" title="Accedi">Accedi</a>
           <%}else{ %>
           <a href="LogoutServlet" title="Logout">Esci</a>
           <%} %>
@@ -41,8 +41,7 @@
       </header>
 
     <nav>
-      <ul>
-        
+      <ul>  
         <li><a href="Azienda.jsp">Azienda</a></li>
         <li><a href="Cantine.jsp">Cantine</a></li>
         <li><a href="ProductView.jsp">Catalogo</a></li>

@@ -1,0 +1,88 @@
+package model;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.time.LocalDate;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
+
+
+@WebServlet("/RegistrationServlet")
+public class RegistrationServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	private static DataSource ds;
+	
+	static {
+		try {
+			Context initCtx = new InitialContext();
+			Context envCtx = (Context) initCtx.lookup("java:comp/env");
+
+			ds = (DataSource) envCtx.lookup("jdbc/burn_house");
+
+		} catch (NamingException e) {
+			System.out.println("Error:" + e.getMessage());
+		}
+	}
+
+	private static final String TABLE_NAME = "utente";   
+
+    public RegistrationServlet() {
+        super();
+    }
+
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nome=request.getParameter("nome");
+		String cognome=request.getParameter("cognome");
+		String email=request.getParameter("email");
+		String password=request.getParameter("password");
+		String data_nascitaStr=request.getParameter("data_nascita");
+		
+		LocalDate dataNascita = LocalDate.parse(data_nascitaStr);
+		java.sql.Date dataNascitaSQL = java.sql.Date.valueOf(dataNascita);
+		
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		String selectSQL = "INSERT INTO "+ RegistrationServlet.TABLE_NAME + " VALUES (?,?,?,?,?,?)";
+		
+		try {
+			
+			connection = ds.getConnection();
+			preparedStatement = connection.prepareStatement(selectSQL);
+			preparedStatement.setString(1, email);
+			preparedStatement.setString(2, password);
+			preparedStatement.setString(3, nome);
+			preparedStatement.setString(4, cognome);
+			preparedStatement.setDate(5, dataNascitaSQL);
+			preparedStatement.setString(6, "user");
+			preparedStatement.executeUpdate();
+			
+			
+			String redirectedPage = "/Home.jsp";
+			response.sendRedirect(request.getContextPath() + redirectedPage);	
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

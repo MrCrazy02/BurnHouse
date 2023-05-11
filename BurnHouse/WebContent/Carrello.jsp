@@ -7,14 +7,19 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Carrello</title>
-		<link rel="stylesheet" type="text/css" href="StileCarrello.css">	
+		<link rel="stylesheet" type="text/css" href="CarrelloStile.css">	
 	</head>
 	<body>
 		<%Carrello cart=(Carrello)request.getSession().getAttribute("cart"); %>
 		<hr>
 		<%if(cart==null || cart.GetCart().size()==0) {%>
-		<center>Carrello vuoto, aggiungi qualcosa</center>
-				
+		<div class="empty-cart">
+  <img id="emptyCartImage" src="${pageContext.request.contextPath}/Immagini/emptycart.jpg" alt="immagine non disponibile">
+  <p>Attualmente il carrello è vuoto</p><br>
+  <div class="button-container">
+    <a href="ProductView.jsp" class="button">Aggiungi qualcosa</a>
+  </div>
+</div>		
 		<%}else{ %>
 		<br>
 		<table border=1>
@@ -37,6 +42,9 @@
 			<%} %>
 		</table>
 		<%}%>
+		<footer class="footer">
 		<jsp:include page="Footer.jsp" />
+		</footer>
+		
 	</body>
 </html>

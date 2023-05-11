@@ -27,9 +27,9 @@
         <div id="zonaleftcenter">
           <h1>Informazioni</h1>
           <ul>
-            <li class= "selected"><a href="Comeordinare.jsp">Come ordinare</a></li>
-            <li><a href="Spedizionipagamenti.jsp">Spedizione e pagamenti</a></li>
-            <li><a href="Privacyecookie.jsp">Privacy e cookie</a></li>
+            <li class= "selected"><a href="Azienda.jsp">Come ordinare</a></li>
+            <li><a href="Azienda.jsp">Spedizione e pagamenti</a></li>
+            <li><a href="Azienda.jsp">Privacy e cookie</a></li>
             <li><a href="Azienda.jsp">Condizioni di vendita</a></li>
             <li><a href="Azienda.jsp">L'Azienda</a></li>
           </ul>

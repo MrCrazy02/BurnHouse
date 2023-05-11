@@ -74,16 +74,18 @@ public class LoginServlet extends HttpServlet {
 				utente.setType(rs.getString("tipo"));
 				if(utente.getType().equals("admin")) {
 					request.getSession().setAttribute("adminFilter", true);
+					request.getSession().setAttribute("userFilter", false);
 				}
 				else {
 					request.getSession().setAttribute("adminFilter", false);
+					request.getSession().setAttribute("userFilter", true);
 				}
 				RequestDispatcher rd = request.getRequestDispatcher("Home.jsp");
 				rd.forward(request, response);
 			}
 			else {
 				out.println("<font color=red size=18>Email o password errate!<br>>");
-				out.println("<a href=Login.jsp> Riprova");
+				out.println("<a href=Access.jsp> Riprova");
 			}
 
 		} catch (SQLException e) {
