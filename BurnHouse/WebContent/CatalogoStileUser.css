@@ -102,6 +102,10 @@
 }
 
 
+.card .contentBox .buy:hover{
+  background: #ff3333;	
+}
+
 .card:hover .contentBox .buy {
   top: 0;
   opacity: 1;
