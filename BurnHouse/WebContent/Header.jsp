@@ -19,15 +19,8 @@
       <header>
         <div id="zonaleft">
         <a href="Home.jsp">
-<<<<<<< HEAD
-
-      
 
           <img id="headerLogo"src="Immagini/logop.png" alt="Burn House header logo image">
-
-=======
-          <img id="headerLogo"src="Images/logop.png" alt="Burn House header logo image">
->>>>>>> branch 'master' of https://github.com/MrCrazy02/BurnHouse.git
         </a>
         </div>
   
