@@ -7,6 +7,7 @@
   <head>
     <meta charset="utf-8">
     <title>Burn House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="Header.css">
   </head> 
 
@@ -26,7 +27,9 @@
           <form action="#" method="get">
             <input id="search-box-input" type="search" name="search" maxlength="255" placeholder="Cosa stai cercando ?" autocomplete="off">
           </form>
-          
+          <div>
+          </div>
+        
         </div>
   
         <div id="zonaright">

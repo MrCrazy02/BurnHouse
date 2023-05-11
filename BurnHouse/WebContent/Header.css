@@ -4,11 +4,11 @@ div.linea {
   background: #333;
   color: white;*/
     font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     text-align: center;
     color: white;
     font-weight: normal;
-    line-height: 1.5;
+    line-height: 2;
     letter-spacing: normal;
     font-style: normal;
     background-color: black;
@@ -27,14 +27,14 @@ Header {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #fff;
+  background-color: #751f3d;
 }
 
 
 
 #zonaleft img {
-     width: 300px; /* Imposta la larghezza dell'immagine a 300 pixel */
-     height: 100px; /* Imposta l'altezza dell'immagine a 150 pixel */
+     width: 80px; /* Imposta la larghezza dell'immagine a 300 pixel */
+     height: auto; /* Imposta l'altezza dell'immagine a 150 pixel */
 }
 
 #search-box-input {
