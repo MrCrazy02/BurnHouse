@@ -38,12 +38,42 @@ Header {
 }
 
 #search-box-input {
-  width: 600px;
+  width: 600px;/*600*/
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  margin-left: 75px;/*nuovo*/
 }
+
+#zonaright a{
+	margin-left: 20px;
+  font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 14px;
+  color: black;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: normal;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#zonaright a:hover {
+	margin-left: 20px;
+    font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 14px;
+    color: red;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: normal;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/*
 
 #zonaright a:link { 
   margin-left: 20px;
@@ -72,6 +102,7 @@ Header {
   text-transform: uppercase;
   text-decoration: none;
 }
+*/
 
 nav {
 background-color: #751f3d;
