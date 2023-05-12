@@ -73,47 +73,45 @@ Header {
   text-decoration: none;
 }
 
-/* nav new in blog */
 nav {
-  background-color: #fff;
-  margin: 0px 0px 0px 0px;
+background-color: #751f3d;
+margin: 0;
+display: flex;
+justify-content: center;
 }
+
 nav ul {
-margin: 0px;
-list-style-type: none;
-padding: 5px 0px 5px 0px;
+margin: 0;
+padding: 0;
+list-style: none;
+display: flex;
+justify-content: center;
 }
+
 nav ul li {
-display: inline;
-padding: 10px 60px 5px 10px;
+margin: 0;
+padding: 0 20px;
 }
 
-
-nav a:link {
-    font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
-    font-size: 14px;
-    color: #000;
-    font-weight: 600;
-    line-height: 48px;
-    letter-spacing: normal;
-    font-style: normal;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
+nav a {
+display: block;
+font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+font-size: 14px;
+font-weight: 600;
+line-height: 48px;
+letter-spacing: normal;
+font-style: normal;
+text-align: center;
+text-transform: uppercase;
+text-decoration: none;
+color: #fff;
+transition: color 0.3s ease-in-out;
 }
 
-
-  nav a:hover {
-    font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
-    font-size: 14px;
-    color: red;
-    font-weight: 600;
-    line-height: 48px;
-    letter-spacing: normal;
-    font-style: normal;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
+nav a:hover {
+color: red;
 }
 
 h2 { font-size: 130%; }
+            
+
