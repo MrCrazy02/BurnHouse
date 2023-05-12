@@ -1,7 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import="model.*" %>
-<%Boolean isAdmin = (Boolean)session.getAttribute("adminFilter"); %>
+<%	
+	Boolean isAdmin = (Boolean)session.getAttribute("adminFilter");
+	Boolean isUser = (Boolean) session.getAttribute("userFilter");
+	boolean isLoggedUser = isUser != null && isUser.booleanValue();
+	boolean isLoggedAdmin = isAdmin != null && isAdmin.booleanValue();
+%>
 <!DOCTYPE html>
 <html>
 <%@ page import="java.util.*" %>
@@ -9,7 +14,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Distillati</title>
-<link rel="stylesheet" type="text/css" href="StileCatalogo.css">	
+<%if(isAdmin!=null && isAdmin!=false){ %>
+	<link rel="stylesheet" type="text/css" href="CatalogoStileAdmin.css">	
+<% } else {%>
+	<link rel="stylesheet" type="text/css" href="CatalogoStileUser.css">
+<% } %>	
 </head>
 <body>
 <hr>
@@ -20,26 +29,33 @@
 	
 	
 	<% for (ProductBean bean : products) { %>
-    <div class="card">
-	<div class="img-container">
-		<a href="Dettagli.jsp?id=<%=bean.getCode()%>" target="_blank">
-  		<img src="${pageContext.request.contextPath}/Images/<%=bean.getImg()%>" alt="<%=bean.getName() %>" style="width:100%"></a>
- 			<div class="btn-container">
-  				 <a href="CartController?action=addCart&id=<%=bean.getCode()%>"><button class="btn" >Aggiungi al carrello</button></a>
-  			</div>
-  	</div>
-  <hr> <!-- Aggiungi una linea orizzontale come divisore -->
-  	<div class="product-info"> <!-- crea un div per il nome e il prezzo del prodotto -->
-    	<h4><%=bean.getName() %></h4>
-   		<div><p class="price">€<%=String.format("%.2f", bean.getPrice()) %></p></div>  
-  	</div>
-  	<%if(isAdmin!=null && isAdmin!=false){ %>
-  	
-  	<a href="product?action=delete&id=<%=bean.getCode()%>"><button>Elimina</button></a><br>
-  	<a href="Modifica.jsp?id=<%=bean.getCode()%>" target="_blank"><button>Modifica</button></a><br>
-  	<%} %>  
-</div>
-<% } %>
+	<div class="card-container">
+		<div class="card">
+				<div class="imgBox">
+					<a href="Dettagli.jsp?id=<%=bean.getCode()%>" target="_blank">
+				    <img src="${pageContext.request.contextPath}/Immagini/<%=bean.getImg()%>" alt="<%=bean.getName() %>" class="product">
+				    </a>
+				</div>	
+			<div class="contentBox">
+				   <h3><%=bean.getName() %></h3>
+				   <h2 class="price"><%=String.format("%.2f", bean.getPrice()) %> €</h2>
+				   <%if (!isLoggedUser && !isLoggedAdmin){ %>
+				   <a href="Access.jsp" class="buy">Aggiungi al carrello</a>
+				   <%} else{%>
+				   <a href="CartController?action=addCart&id=<%=bean.getCode()%>" class="buy">Aggiungi al carrello</a>
+				   <%} %>
+		  	</div>
+		  		<div class="buttons">
+				     	<%if(isAdmin!=null && isAdmin!=false){ %>
+					  	<a href="product?action=delete&id=<%=bean.getCode()%>">Elimina</a><br>
+					  	<a href="Modifica.jsp?id=<%=bean.getCode()%>" target="_blank">Modifica</a><br>
+					  	<%} %>  
+				</div>
+	
+		</div>
+	</div>
+	<% } %>
+	
 	<jsp:include page="Footer.jsp" />
 </body>
 </html>

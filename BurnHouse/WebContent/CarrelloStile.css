@@ -1,0 +1,100 @@
+@charset "ISO-8859-1";
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  border-color: #2e6da4;
+  background-color: #ddd;
+  color: black;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+  text-decoration: none;
+}
+
+.empty-cart img#emptyCartImage {
+  width: 30% !important;
+  display: block;
+  margin: 0 auto;
+}
+
+.empty-cart {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.empty-cart p {
+  
+	color: #000000; font-size: 48px; font-family: 'Trocchi', serif; padding-bottom: 10px;
+	
+  margin-bottom: 10px;
+  margin-left: 55px; /* Aggiungi uno spazio a sinistra */
+  margin-right: 10px;
+}
+
+.empty-cart .button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #751f3d;
+  color: #FFFFFF;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-left: 55px; /* Aggiungi uno spazio a sinistra */
+  margin-right: 10px;
+}
+
+.button:hover{
+	 background-color: #751f3d;
+}
+
+body {
+  margin-bottom: 10px; /* Aggiungi uno spazio di 20px tra il corpo e il footer */
+}
+
+.footer {
+  margin-top: 200px; /* Aggiungi uno spazio di 20px tra il footer e gli elementi sopra di esso */
+}

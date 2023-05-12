@@ -115,40 +115,8 @@
   color: red;
 }
 
-#zonaright {
-  margin-left: 20px;
-  font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 14px;
-  color: black;
-}
 
-#zonaright h1 {
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: normal;
-  font-style: normal;
-  text-align: center;
-  text-transform: uppercase;
-}
 
-#zonaright ul {
-  list-style: none;
-  padding: 0;
-}
-
-#zonaright li {
-  margin-bottom: 10px;
- /* line-height: 24px;*/
-}
-
-#zonaright a {
-  color: black;
-  text-decoration: none;
-}
-
-#zonaright a:hover {
-  color: red;
-}
 
 h1 {
   font-size:        120%;

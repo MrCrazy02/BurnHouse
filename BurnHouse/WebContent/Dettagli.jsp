@@ -2,7 +2,12 @@
 	pageEncoding="UTF-8"%>
 
 <%@ page import="java.util.*, model.ProductBean" %>
-
+<% 
+	Boolean isAdmin = (Boolean) session.getAttribute("adminFilter");
+	Boolean isUser = (Boolean) session.getAttribute("userFilter");
+	boolean isLoggedUser = isUser != null && isUser.booleanValue();
+	boolean isLoggedAdmin = isAdmin != null && isAdmin.booleanValue();
+%>
 
 <%
 	// Recupera l'id del prodotto dalla richiesta
@@ -31,7 +36,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title><%=bean.getName()%></title>
-	<link rel="stylesheet" type="text/css" href="StileDettagli.css">
+	<link rel="stylesheet" type="text/css" href="DettagliStile.css">
 </head>
 <body>
 	
@@ -60,7 +65,11 @@
     <!-- Product Pricing -->
     <div class="product-price">
       <span><%=String.format("%.2f", bean.getPrice()) %>€</span>
-      <a href="CartController?action=addCart&id=<%=bean.getCode()%>" class="cart-btn">Aggiungi al carrello</a>
+      <%if (!isLoggedUser && !isLoggedAdmin){ %>
+      <a href="Access.jsp" class="cart-btn">Aggiungi al carrello</a>
+      <%} else{%>
+      	<a href="CartController?action=addCart&id=<%=bean.getCode()%>" class="cart-btn">Aggiungi al carrello</a>
+      <%} %>
     </div>
   </div>
 </main>
