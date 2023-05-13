@@ -9,6 +9,8 @@
     <title>Burn House</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="Header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
   </head> 
 
   <body>
@@ -34,13 +36,23 @@
         </div>
   
         <div id="zonaright">
+           <div class="header-icons">
         <%if(ad==null){ %>
-          <a href="Access.jsp" title="Accedi">Accedi</a>
+           <a href="Access.jsp" class="icon-link">
+          <i class="fas fa-user"></i>
+             <span>Accedi</span>
+          </a>
           <%}else{ %>
-          <a href="LogoutServlet" title="Logout">Esci</a>
+          <a href="LogoutServlet" class="icon-link">
+            <i class="">fas fa-sign-out-alt</i>
+            <span>Logout</span>
+         </a>
           <%} %>
-          <a href="Carrello.jsp" title="Carrello">Carrello</a>
-          
+          <a href="Carrello.jsp" class="icon-link">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Carrello</span>
+         </a>
+          </div>
         </div>
       </header>
 
@@ -55,6 +67,15 @@
         <li><a href="Contatti.jsp">Contatti</a></li>
       </ul>
     </nav>
+    
+    
+    
+      
+        
+      
+    </div>
+    
+    
   </body>
 </html>
 
