@@ -146,6 +146,7 @@ color: red;
 h2 { font-size: 130%; }
 
 
+/* CSS per le icone*/
 .header-icons {
   display: flex;
   justify-content: flex-end;
