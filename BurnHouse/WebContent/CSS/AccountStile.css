@@ -1,0 +1,72 @@
+@charset "ISO-8859-1";
+
+    
+    corpo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+	      .foto {
+	    display: flex;
+	    justify-content: center;
+	    margin-bottom: 20px;
+	  }
+	
+	  .foto img {
+	    width: 20%;
+	    height: 20%;
+	  }
+    
+    .dettagli {
+	    display: grid;
+	    justify-content: center;
+	    margin-bottom: 20px;
+	  }
+    .account-details {
+      margin-left:5%;
+  	  margin-right:5%;
+      background-color: rgb(216, 216, 216);
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       height: 700px;
+    }
+    
+    .account-details h1 {
+      text-align: center;
+      color: #333333;
+    }
+    
+    .account-details h2 {
+      color: #555555;
+    }
+    
+    .account-details p {
+      color: #888888;
+    }
+    
+    
+    .exit-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.exit-button a {
+  text-decoration: none;
+  background-color: #751f3d;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.exit-button a:hover {
+  background-color: #bf3364;
+}
+    
+    
+    
+    
+    

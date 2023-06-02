@@ -1,0 +1,124 @@
+#sopra {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#sotto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+
+#zonaleftfooter {
+  margin-left: 20px;
+  font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  color: black;
+  
+}
+
+#zonaleftfooter h1 {
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: normal;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+#zonaleftfooter ul {
+  list-style: none;
+  padding: 0;
+}
+
+#zonaleftfooter li {
+  margin-bottom: 10px;
+ /* line-height: 24px;*/
+}
+
+
+
+#zonaleftcenterfooter {
+  margin-left: 20px;
+  font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  color: black;
+}
+
+#zonaleftcenterfooter h1 {
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: normal;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#zonaleftcenterfooter ul {
+  list-style: none;
+  padding: 0;
+}
+
+#zonaleftcenterfooter li {
+  margin-bottom: 10px;
+ /* line-height: 24px;*/
+}
+
+#zonaleftcenterfooter a {
+  color: black;
+  text-decoration: none;
+}
+
+#zonaleftcenterfooter a:hover {
+  color: red;
+}
+
+
+#zonarightcenterfooter {
+  margin-left: 20px;
+  font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  color: black;
+}
+
+#zonarightcenterfooter h1 {
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: normal;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#zonarightcenterfooter ul {
+  list-style: none;
+  padding: 0;
+}
+
+#zonarightcenterfooter li {
+  margin-bottom: 10px;
+ /* line-height: 24px;*/
+}
+
+#zonarightcenterfooter a {
+  color: black;
+  text-decoration: none;
+}
+
+#zonarightcenterfooter a:hover {
+  color: red;
+}
+
+
+
+
+#zonaleft h1 {
+  font-size:        120%;
+  color:            #954b4b;
+}
