@@ -39,7 +39,7 @@
 			<div class="Cart-Items">
 				<div class="image-box">
 				<a href="Dettagli.jsp?id=<%=order.GetCode()%>" target="_blank" rel="noopener">
-				<img src="${pageContext.request.contextPath}/Immagini/<%=order.GetImage()%>" alt="<%=order.GetNome() %>">
+				<img src="${pageContext.request.contextPath}/Immagini/<%=order.GetImage()%>" alt="<%=order.GetNome() %>" class="cart-img">
 				</a>
 				</div>
 				<div class="about">

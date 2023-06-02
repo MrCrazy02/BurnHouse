@@ -1,5 +1,14 @@
 @charset "ISO-8859-1";
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 .CartUser{
  margin:0;
  padding:0;
@@ -60,7 +69,7 @@
  justify-content:center;
 }
 
-img{
+.cart-img{
 	width:240px;
 	height:300px;
 }
@@ -290,7 +299,7 @@ a:hover {
 	height:250px;
 	}
 	
-	img{
+	.cart-img{
 	width:180px;
 	height:220px;
 }
@@ -339,7 +348,7 @@ a:hover {
 	height:200px;
 	}
 	
-	img{
+	.cart-img{
 	width:100px;
 	height:150px;
 	align:left;
