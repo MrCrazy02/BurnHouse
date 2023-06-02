@@ -1,13 +1,5 @@
 @charset "ISO-8859-1";
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-}
-
 .CartUser{
  margin:0;
  padding:0;
@@ -52,7 +44,7 @@ body {
 .Cart-Items{
  margin: auto;
  width: 90%;
- height: 30%;
+ height: 50%;
  display: flex;
  justify-content: space-between;
  align-items: center;
@@ -61,10 +53,16 @@ body {
 
 
 .image-box{
- width: 17%;
+ width:20%;
  text-align: center;
  display:flex;
- flex-direction:column;
+ height:90%;
+ justify-content:center;
+}
+
+img{
+	width:240px;
+	height:300px;
 }
 
 .about{
@@ -94,9 +92,8 @@ body {
 .counter{
  width: 15%;
  display: flex;
- justify-content: space-between;
- align-items: center;
- flex-direction:row;
+ justify-content:space-between;
+ align-items:center;
 }
 .btn{
  width: 40px;
@@ -230,7 +227,7 @@ a:hover {
 
 .empty-cart p {
   
-	color: #000000; font-size: 48px;  padding-bottom: 10px;
+	color: #000000; font-size: 48px; font-family: 'Trocchi', serif; padding-bottom: 10px;
 	
   margin-bottom: 10px;
   margin-left: 55px; /* Aggiungi uno spazio a sinistra */
@@ -268,7 +265,7 @@ a:hover {
 
 
 
-@media only screen and (max-width:1110px){
+@media only screen and (max-width:1200px){
 	.Cart-Container{
 	width:70%;
 	}
@@ -289,16 +286,29 @@ a:hover {
 	}
 	
 	.image-box{
-	width:30%;
+	width:20%;
+	height:250px;
 	}
+	
+	img{
+	width:180px;
+	height:220px;
+}
 	.subtitle{
-	text-align:center;}
+	text-align:center;
+	}
 
 
 @media only screen and (max-width:700px){
 	
 	.Cart-Container{
-	width:88%;
+	width:80%;
+	height:90%;
+	}
+
+	.Cart-Items{
+	height:25%;
+	width:70%;
 	}
 
 	.Heading{
@@ -325,16 +335,24 @@ a:hover {
 	}
 	
 	.image-box{
-	width:35%;
-	align-items:left;
+	width:10%;
+	height:200px;
 	}
 	
-
+	img{
+	width:100px;
+	height:150px;
+	align:left;
+}
+	
 	.btn{
 	width:20px;
 	height:20px;
 	}
 	
+	.checkout{
+	width:50%;
+	}
 
 	.count{
 	font-size:15px;
