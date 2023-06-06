@@ -116,7 +116,98 @@
     
     <div class="product-card3">
       <div class="product-image3">
-        <img class="abimg" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+      </div>
+      <div class="product-info3">
+         <span class="price3">Gianluca Palumbo</span>
+        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
+        
+        
+      </div>
+    </div>
+    
+    
+    <div class="product-card3">
+      <div class="product-image3">
+        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+      </div>
+      <div class="product-info3">
+         <span class="price3">Gianluca Palumbo</span>
+        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
+        
+        
+      </div>
+    </div>
+    
+    
+    <div class="product-card3">
+      <div class="product-image3">
+        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+      </div>
+      <div class="product-info3">
+         <span class="price3">Gianluca Palumbo</span>
+        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
+        
+        
+      </div>
+    </div>
+    
+    
+    <div class="product-card3">
+      <div class="product-image3">
+        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+      </div>
+      <div class="product-info3">
+         <span class="price3">Gianluca Palumbo</span>
+        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
+        
+        
+      </div>
+    </div>
+    
+    
+    <div class="product-card3">
+      <div class="product-image3">
+        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+      </div>
+      <div class="product-info3">
+         <span class="price3">Gianluca Palumbo</span>
+        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
+        
+        
+      </div>
+    </div>
+    
+    
+    <div class="product-card3">
+      <div class="product-image3">
+        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+      </div>
+      <div class="product-info3">
+         <span class="price3">Gianluca Palumbo</span>
+        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
+        
+        
+      </div>
+    </div>
+    
+    
+    <div class="product-card3">
+      <div class="product-image3">
+        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+      </div>
+      <div class="product-info3">
+         <span class="price3">Gianluca Palumbo</span>
+        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
+        
+        
+      </div>
+    </div>
+    
+    
+    <div class="product-card3">
+      <div class="product-image3">
+        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
       </div>
       <div class="product-info3">
          <span class="price3">Gianluca Palumbo</span>
