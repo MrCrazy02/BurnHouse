@@ -103,8 +103,12 @@
 	<!-- linea 3 -->
 	<!-- linea 3 -->
         <div class="parent">
+           <div class="title-container">
+            <h1 class="title">RECENSIONI</h1>
+            <div class="line"></div>
+          </div>
             <div class="testimonials">
-                <h2>Testimonials</h2>
+                
                 <div class="testimonials-boxes">
                     <div class="box">
                         <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>

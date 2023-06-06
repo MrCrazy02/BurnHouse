@@ -181,17 +181,37 @@
     left: 50%;
     z-index: -1;
 }
-.testimonials h2 {
-    padding: 10px 0;
-    font-size: 28px;
-    position: absolute;
-    margin-left: 30%;
+
+
+.title-container {
+  text-align: center;
 }
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: orange;
+  margin: 10px auto;
+}
+
+
 .testimonials .testimonials-boxes {
+    /*
     display: flex;
     flex-direction: row;
     margin-top: 140px;
     margin-right: 45px;
+    */
+    
+    padding: 0 10vw;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
 }
 .testimonials .testimonials-boxes .box {
     width: 33%;
