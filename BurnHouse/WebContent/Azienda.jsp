@@ -102,124 +102,46 @@
  <!-- TESTIMONIALS -->
 	<!-- linea 3 -->
 	<!-- linea 3 -->
-	<section class="product3"> 
-	<div class="title-container">
-            <h1 class="title">RECENSIONI</h1>
-            <div class="line"></div>
-          </div>
-  <button class="pre-btn3"><img src="${pageContext.request.contextPath}/Immagini/arrow.png" alt=""></button>
-  <button class="nxt-btn3"><img src="${pageContext.request.contextPath}/Immagini/arrow.png" alt=""></button>
-  <script src="prova.js"></script>
-  
-   
-  <div class="product-container3">
-    
-    <div class="product-card3">
-      <div class="product-image3">
-        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
-      </div>
-      <div class="product-info3">
-         <span class="price3">Gianluca Palumbo</span>
-        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
-        
-        
-      </div>
-    </div>
-    
-    
-    <div class="product-card3">
-      <div class="product-image3">
-        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
-      </div>
-      <div class="product-info3">
-         <span class="price3">Gianluca Palumbo</span>
-        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
-        
-        
-      </div>
-    </div>
-    
-    
-    <div class="product-card3">
-      <div class="product-image3">
-        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
-      </div>
-      <div class="product-info3">
-         <span class="price3">Gianluca Palumbo</span>
-        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
-        
-        
-      </div>
-    </div>
-    
-    
-    <div class="product-card3">
-      <div class="product-image3">
-        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
-      </div>
-      <div class="product-info3">
-         <span class="price3">Gianluca Palumbo</span>
-        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
-        
-        
-      </div>
-    </div>
-    
-    
-    <div class="product-card3">
-      <div class="product-image3">
-        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
-      </div>
-      <div class="product-info3">
-         <span class="price3">Gianluca Palumbo</span>
-        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
-        
-        
-      </div>
-    </div>
-    
-    
-    <div class="product-card3">
-      <div class="product-image3">
-        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
-      </div>
-      <div class="product-info3">
-         <span class="price3">Gianluca Palumbo</span>
-        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
-        
-        
-      </div>
-    </div>
-    
-    
-    <div class="product-card3">
-      <div class="product-image3">
-        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
-      </div>
-      <div class="product-info3">
-         <span class="price3">Gianluca Palumbo</span>
-        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
-        
-        
-      </div>
-    </div>
-    
-    
-    <div class="product-card3">
-      <div class="product-image3">
-        <img class="img" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
-      </div>
-      <div class="product-info3">
-         <span class="price3">Gianluca Palumbo</span>
-        <h2 class="product-brand3">Prezzo molto buono. Sicuramente passerò a trovarvi</h2>
-        
-        
-      </div>
-    </div>
-
-  </div>
-
-</section>
+        <div class="parent">
+            <div class="testimonials">
+                <h2>Testimonials</h2>
+                <div class="testimonials-boxes">
+                    <div class="box">
+                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
+                        <span>Someone</span>
+                        <img src="https://cdn.pixabay.com/photo/2019/11/03/05/36/portrait-4597853__340.jpg" alt="#">
+                    </div>
+                    <div class="box">
+                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
+                        <span>Someone</span>
+                        <img src="https://cdn.pixabay.com/photo/2017/01/03/09/18/woman-1948939__340.jpg" alt="#">
+                    </div>
+                    <div class="box">
+                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
+                        <span>Someone</span>
+                        <img src="https://cdn.pixabay.com/photo/2017/03/02/20/25/woman-2112292__340.jpg" alt="#">
+                    </div>
+                    
+                    <div class="box">
+                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
+                        <span>Someone</span>
+                        <img src="https://cdn.pixabay.com/photo/2017/03/02/20/25/woman-2112292__340.jpg" alt="#">
+                    </div>
+                    
+                    <div class="box">
+                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
+                        <span>Someone</span>
+                        <img src="https://cdn.pixabay.com/photo/2017/03/02/20/25/woman-2112292__340.jpg" alt="#">
+                    </div>
+                    
+                    <div class="box">
+                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
+                        <span>Someone</span>
+                        <img src="https://cdn.pixabay.com/photo/2017/03/02/20/25/woman-2112292__340.jpg" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
  
 
  
