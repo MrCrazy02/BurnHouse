@@ -7,7 +7,10 @@
 <head>
     <title>About Us</title>
     
+    
+    
   <link rel="stylesheet" type="text/css" href="./CSS/Azienda.css">
+  
    
 </head>
 <body>
@@ -101,55 +104,161 @@
  <!-- prova -->
  <!-- TESTIMONIALS -->
 	<!-- linea 3 -->
-	<!-- linea 3 -->
-        <div class="parent">
-           <div class="title-container">
-            <h1 class="title">RECENSIONI</h1>
-            <div class="line"></div>
-          </div>
-            <div class="testimonials">
-                
-                <div class="testimonials-boxes">
-                    <div class="box">
-                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
-                        <span>Someone</span>
-                        <img src="https://cdn.pixabay.com/photo/2019/11/03/05/36/portrait-4597853__340.jpg" alt="#">
-                    </div>
-                    <div class="box">
-                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
-                        <span>Someone</span>
-                        <img src="https://cdn.pixabay.com/photo/2017/01/03/09/18/woman-1948939__340.jpg" alt="#">
-                    </div>
-                    <div class="box">
-                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
-                        <span>Someone</span>
-                        <img src="https://cdn.pixabay.com/photo/2017/03/02/20/25/woman-2112292__340.jpg" alt="#">
-                    </div>
-                    
-                    <div class="box">
-                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
-                        <span>Someone</span>
-                        <img src="https://cdn.pixabay.com/photo/2017/03/02/20/25/woman-2112292__340.jpg" alt="#">
-                    </div>
-                    
-                    <div class="box">
-                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
-                        <span>Someone</span>
-                        <img src="https://cdn.pixabay.com/photo/2017/03/02/20/25/woman-2112292__340.jpg" alt="#">
-                    </div>
-                    
-                    <div class="box">
-                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
-                        <span>Someone</span>
-                        <img src="https://cdn.pixabay.com/photo/2017/03/02/20/25/woman-2112292__340.jpg" alt="#">
-                    </div>
-                </div>
-            </div>
-        </div>
- 
+<!-- Testimonial -->
+<section id="testimonials">
 
- 
- 
+<!-- Heading -->
+   <div class="testimonial-heading">  
+      <span>Comments</span>
+      <h1>Clients Says</h1>
+   </div>
+   
+   <!-- testimonials-box-container -->
+   <div class="testimonial-box-container">
+   
+   <!-- Box 1 -->
+   <div class="testimonial-box">
+      <!-- top -->
+      <div class="blox-top">
+         <div class="profile">
+            <div class="profile-img">
+              <img src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+            </div>
+            
+            <div class="name-user">
+                <strong>Lorem Ipsum </strong>
+                <span>@toussere erwerwerr</span>
+            </div>
+         </div>
+         
+         <div class="reviews">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+         </div>
+      </div>
+      
+      <div class="client-comment">
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+      
+      
+   </div>
+   
+      <div class="testimonial-box">
+      <!-- top -->
+      <div class="blox-top">
+         <div class="profile">
+            <div class="profile-img">
+              <img src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+            </div>
+            
+            <div class="name-user">
+                <strong>Tousserq erwerewr</strong>
+                <span>@toussere erwerwerr</span>
+            </div>
+         </div>
+         
+         <div class="reviews">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+         </div>
+      </div>
+      
+      <div class="client-comment">
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+      
+      
+   </div>
+   
+      <div class="testimonial-box">
+      <!-- top -->
+      <div class="blox-top">
+         <div class="profile">
+            <div class="profile-img">
+              <img src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+            </div>
+            
+            <div class="name-user">
+                <strong>Tousserq erwerewr</strong>
+                <span>@toussere erwerwerr</span>
+            </div>
+         </div>
+         
+         <div class="reviews">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+         </div>
+      </div>
+      
+      <div class="client-comment">
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+      
+      
+   </div>
+   
+      <div class="testimonial-box">
+      <!-- top -->
+      <div class="blox-top">
+         <div class="profile">
+            <div class="profile-img">
+              <img src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+            </div>
+            
+            <div class="name-user">
+                <strong>Tousserq erwerewr</strong>
+                <span>@toussere erwerwerr</span>
+            </div>
+         </div>
+         
+         <div class="reviews">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+         </div>
+      </div>
+      
+      <div class="client-comment">
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+      
+      
+   </div>
+   
+   </div>
+   
+   
+</section>
+
+		
+		
+	
+
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+
  
  
  
@@ -162,9 +271,6 @@
 <jsp:include page="Footer.jsp" />
 
 
-</body>
-</html>
-	
 	
 	
 </body>
