@@ -74,7 +74,7 @@ public class RegistrationServlet extends HttpServlet {
 			response.sendRedirect(request.getContextPath() + redirectedPage);	
 			
 		}catch(SQLException e) {
-			e.printStackTrace();
+			response.sendRedirect("GeneralError");
 		}
 		
 		

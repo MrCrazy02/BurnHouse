@@ -86,7 +86,7 @@ public class ProductControl extends HttpServlet {
 							fos.close();
 							}
 							catch(Exception e){
-								e.printStackTrace();
+								response.sendRedirect("GeneralError");
 							}
 						
 						ProductBean bean = new ProductBean();
@@ -132,7 +132,7 @@ public class ProductControl extends HttpServlet {
 							fos.close();
 							}
 							catch(Exception e){
-								e.printStackTrace();
+								response.sendRedirect("GeneralError");
 							}
 						
 						
