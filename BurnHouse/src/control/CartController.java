@@ -49,8 +49,10 @@ public class CartController extends HttpServlet {
 			cart.GetCart().get(Integer.parseInt(request.getParameter("index"))).IncrQuantita();
 		}else if(action.equals("Decrement")){
 			
-			if(cart.GetCart().get(Integer.parseInt(request.getParameter("index"))).GetQuantita()<=1) {
-				cart.GetCart().remove(Integer.parseInt(request.getParameter("index")));
+			if(cart.GetCart().get(Integer.parseInt(request.getParameter("index"))).GetQuantita()==1) {
+				request.getSession().setAttribute("cart", cart);
+				RequestDispatcher disp=getServletContext().getRequestDispatcher("/Carrello.jsp");
+				disp.forward(request, response);
 				
 			}else {
 				cart.GetCart().get(Integer.parseInt(request.getParameter("index"))).DecrQuantita();
@@ -64,6 +66,7 @@ public class CartController extends HttpServlet {
 		disp.forward(request, response);
 		}catch(SQLException e) {
 			System.exit(-1);
+			
 		}
 		}
 	

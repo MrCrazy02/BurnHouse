@@ -13,7 +13,14 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Carrello</title>
-		<link rel="stylesheet" type="text/css" href="./CSS/CarrelloStile.css">	
+		<link rel="stylesheet" type="text/css" href="./CSS/CarrelloStile.css">
+		<script type="text/javascript" src="script/jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$(".Cart-Items").hide();
+		$(".Heading").click(function(){$(".Cart-Items").slideToggle();});
+		});
+		</script>
 	</head>
 	<body>
 		<%Carrello cart=(Carrello)request.getSession().getAttribute("cart"); %>
@@ -33,6 +40,7 @@
 			 <h3 class="Heading">Carrello</h3>
  			 <h5 class="Action"><a href="CartController?action=resetCart" class="cart">Svuota carrello</a></h5>
  		</div>
+ 	
 			<% int i=0;
 			while(i<cart.GetCart().size()){
 				CartProduct order=cart.GetCart().get(i);%>
@@ -52,7 +60,7 @@
 				<div class="btn"><a href="CartController?action=Decrement&index=<%=i%>">-</a></div>
 				</div>
 				<div class="prices">
-				<div class="amount">€<%=String.format("%.2f", order.GetPrezzo()) %></div>
+				<div class="amount" >€<%=String.format("%.2f", order.GetPrezzo()) %></div>
 				<div class="remove"><a href="CartController?action=removeCart&id=<%=order.GetCode()%>" class="cart">Rimuovi</a></div>
 				</div>
 				<%i++; %>	
