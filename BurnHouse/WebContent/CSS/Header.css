@@ -22,7 +22,7 @@ body {
 }
 */
 
-header {
+Header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -143,9 +143,7 @@ transition: color 0.3s ease-in-out;
 color: red;
 }
 
-.linea h2 {
-font-size: 130%; 
-}
+h2 { font-size: 130%; }
 
 
 /* CSS per le icone*/
@@ -160,7 +158,7 @@ font-size: 130%;
   align-items: center;
   margin-left: 20px;
   text-decoration: none;
-  color: #fff;
+  color: #333;
 }
 
 .icon-link:hover {
@@ -177,3 +175,5 @@ font-size: 130%;
   text-align: center;
 }
             
+
+

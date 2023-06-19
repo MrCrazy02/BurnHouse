@@ -3,6 +3,7 @@ package model;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
@@ -48,34 +49,65 @@ public class RegistrationServlet extends HttpServlet {
 		String email=request.getParameter("email");
 		String password=request.getParameter("password");
 		String data_nascitaStr=request.getParameter("data_nascita");
-		
 		LocalDate dataNascita = LocalDate.parse(data_nascitaStr);
 		java.sql.Date dataNascitaSQL = java.sql.Date.valueOf(dataNascita);
 		
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		
-		String selectSQL = "INSERT INTO "+ RegistrationServlet.TABLE_NAME + " VALUES (?,?,?,?,?,?)";
+		String redirectedPage = "/AlreadyRegistered.jsp";
+		String redirectedPage2 = "/Home.jsp";
 		
+		int count=0;
+		
+		String checkSQL = "SELECT COUNT(*) FROM " + RegistrationServlet.TABLE_NAME + " WHERE email=?";
 		try {
-			
 			connection = ds.getConnection();
-			preparedStatement = connection.prepareStatement(selectSQL);
+			preparedStatement = connection.prepareStatement(checkSQL);
 			preparedStatement.setString(1, email);
-			preparedStatement.setString(2, password);
-			preparedStatement.setString(3, nome);
-			preparedStatement.setString(4, cognome);
-			preparedStatement.setDate(5, dataNascitaSQL);
-			preparedStatement.setString(6, "user");
-			preparedStatement.executeUpdate();
 			
+			ResultSet rs = preparedStatement.executeQuery();
+			if(rs.next()) {
+				count =rs.getInt(1);
+			}
 			
-			String redirectedPage = "/Home.jsp";
-			response.sendRedirect(request.getContextPath() + redirectedPage);	
+			if(count>=1)	
+				response.sendRedirect(request.getContextPath() + redirectedPage);
+			else {
+				String selectSQL = "INSERT INTO "+ RegistrationServlet.TABLE_NAME + " VALUES (?,?,?,?,?,?)";
+				
+				try {
+					
+					connection = ds.getConnection();
+					preparedStatement = connection.prepareStatement(selectSQL);
+					preparedStatement.setString(1, email);
+					preparedStatement.setString(2, password);
+					preparedStatement.setString(3, nome);
+					preparedStatement.setString(4, cognome);
+					preparedStatement.setDate(5, dataNascitaSQL);
+					preparedStatement.setString(6, "user");
+					preparedStatement.executeUpdate();
+					
+					
+					
+					response.sendRedirect(request.getContextPath() + redirectedPage2);	
+					
+				}
+				catch(SQLException e) {
+					e.printStackTrace();
+				}
+			}
+				
+				
 			
-		}catch(SQLException e) {
-			response.sendRedirect("GeneralError");
 		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+
 		
 		
 	}

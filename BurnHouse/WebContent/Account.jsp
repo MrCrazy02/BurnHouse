@@ -14,24 +14,33 @@
 <body>
 <br>
 <div class="corpo">
-  <div class="account-details">
+
+
+<div class="account-details">
     <h1>DETTAGLI ACCOUNT</h1>
     <br>
+    <div class="sinistra">
     	<div class="foto">
     	    <img src="${pageContext.request.contextPath}/Immagini/profilo.png" height="180px">
     	</div>
-    <div class="dettagli">
-    <h3>Nome: John Doe</h3>
-    <h3>Cognome: John Doe</h3>
-    <h3>Email: johndoe@example.com</h3>
-    <h3>Data di nascita: johndoe@example.com</h3>
+    	<div class="dettagli">
+		    <h3>Nome: <%= session.getAttribute("nome") %></h3>
+		    <h3>Cognome: <%= session.getAttribute("cognome") %></h3>
+		    <h3>Email: <%= session.getAttribute("email") %></h3>
+		    <h3>Data di nascita: <%= session.getAttribute("dataNascita") %></h3>
+    	</div>
     </div>
-	  <div class="exit-button">
-  	<a href="LogoutServlet">ESCI</a>
-  </div>
-
-
-  </div>
+    
+    
+    <div class="destra">
+    	<div class="ordini">
+    		<a href="">RIEPILOGO ORDINI</a>
+    	</div>
+	  	<div class="exit-button">
+  			<a href="LogoutServlet">ESCI</a>
+  		</div>
+  	</div>
+</div>
   
 
   

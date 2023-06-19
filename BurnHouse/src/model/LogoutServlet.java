@@ -22,6 +22,10 @@ public class LogoutServlet extends HttpServlet {
 		//request.getSession().invalidate();
 		request.getSession().setAttribute("adminFilter", false);
 		request.getSession().setAttribute("userFilter", false);
+		request.getSession().removeAttribute("nome");
+		request.getSession().removeAttribute("cognome");
+		request.getSession().removeAttribute("email");
+		request.getSession().removeAttribute("dataNascita");
 		
 		String redirectedPage = "/Home.jsp";
 		response.sendRedirect(request.getContextPath() + redirectedPage);	

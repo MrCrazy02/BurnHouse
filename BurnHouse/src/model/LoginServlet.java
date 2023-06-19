@@ -1,7 +1,6 @@
 package model;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -57,7 +56,7 @@ public class LoginServlet extends HttpServlet {
 		
 		try {
 			
-			PrintWriter out=response.getWriter();
+			
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement(selectSQL);
 			preparedStatement.setString(1, name);
@@ -72,9 +71,14 @@ public class LoginServlet extends HttpServlet {
 				utente.setSurname(rs.getString("cognome"));
 				utente.setBDate(rs.getString("data_nascita"));
 				utente.setType(rs.getString("tipo"));
+				request.getSession().setAttribute("nome", rs.getString("nome"));
+				request.getSession().setAttribute("cognome", rs.getString("cognome"));
+				request.getSession().setAttribute("email", rs.getString("email"));
+				request.getSession().setAttribute("dataNascita", rs.getString("data_nascita"));
 				if(utente.getType().equals("admin")) {
 					request.getSession().setAttribute("adminFilter", true);
 					request.getSession().setAttribute("userFilter", false);
+					
 				}
 				else {
 					request.getSession().setAttribute("adminFilter", false);
@@ -84,13 +88,12 @@ public class LoginServlet extends HttpServlet {
 				rd.forward(request, response);
 			}
 			else {
-				out.println("<font color=red size=18>Email o password errate!<br>>");
-				out.println("<a href=Access.jsp> Riprova");
+				response.sendRedirect("PasswordErrata.jsp");
 			}
 
 		} catch (SQLException e) {
-			response.sendRedirect("GeneralError");
-		} 
+			response.sendRedirect("GeneralError.jsp");
+		  } 
 		
 		
 	}

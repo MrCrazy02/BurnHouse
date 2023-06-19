@@ -40,7 +40,7 @@
 </head>
 <body>
 	
-	<main class="container">
+  <main class="container">
  
   <!-- Left Column / Headphones Image -->
   <div class="left-column">
@@ -68,15 +68,16 @@
       <span><%=String.format("%.2f", bean.getPrice()) %>€</span>
    
       	<a href="CartController?action=addCart&id=<%=bean.getCode()%>" class="cart-btn">Aggiungi al carrello</a>
-      
+
     </div>
   </div>
 </main>
 	
-	<jsp:include page="Footer.jsp" />
-</body>
-</html>
-<% 
+	      <% 
 	}
 }
 %>
+</body>
+		<jsp:include page="Footer.jsp" />
+</html>
+	

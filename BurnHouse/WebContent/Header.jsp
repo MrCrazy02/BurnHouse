@@ -4,6 +4,8 @@
 <%
 	Boolean ad = (Boolean)session.getAttribute("adminFilter"); 
 	Boolean us = (Boolean)session.getAttribute("userFilter");	
+	boolean isLoggedUser1 = us != null && us.booleanValue();
+	boolean isLoggedAdmin1 = ad != null && ad.booleanValue();
 %>
 <!DOCTYPE html>
 <html>
@@ -49,7 +51,14 @@
           <%}else{ %>
           <a href="Account.jsp" class="icon-link">
             <i class="fas fa-user"></i>
+            <%if(!isLoggedUser1 && !isLoggedAdmin1){ %>
             <span>Account</span>
+            <%}else{%>
+            <span><%= session.getAttribute("nome") %></span>
+          
+            
+            <%} %>
+            
          </a>
           <%} %>
           <a href="Carrello.jsp" class="icon-link">

@@ -12,6 +12,7 @@ html, body {
   margin: 0 auto;
   padding: 15px;
   display: flex;
+  height: 60%;
 }
 
 /* Columns */
