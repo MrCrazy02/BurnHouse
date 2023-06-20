@@ -77,6 +77,66 @@
 	}
 }
 %>
+
+
+ <!-- prova -->
+ <!-- TESTIMONIALS -->
+	<!-- linea 3 -->
+<!-- Testimonial -->
+<div class="title-container">
+            <h1 class="title">RECENSIONI</h1>
+            <div class="line"></div>
+          </div>
+<div class = "comment-session">
+   <div class= "post-comment">
+      <div class= "list">
+         <div class="user">
+          <div class="user-image"><img src="${pageContext.request.contextPath}/Immagini/banner_distillati.jpg" alt="image"></div>
+          <div class="user-meta">
+             <div class="name">Gianluca</div>
+             <div class="day">10 days ago</div>
+          </div>
+      </div>
+      <div class="comment-post">hello commenti poveri</div>
+   </div>  
+   
+   <div class= "list">
+         <div class="user">
+          <div class="user-image"><img src="${pageContext.request.contextPath}/Immagini/banner_distillati.jpg" alt="image"></div>
+          <div class="user-meta">
+             <div class="name">Gianluca</div>
+             <div class="day">10 days ago</div>
+          </div>
+      </div>
+      <div class="comment-post">hello commenti poveri</div>
+   </div>  
+   
+   <div class= "list">
+         <div class="user">
+          <div class="user-image"><img src="${pageContext.request.contextPath}/Immagini/banner_distillati.jpg" alt="image"></div>
+          <div class="user-meta">
+             <div class="name">Gianluca</div>
+             <div class="day">10 days ago</div>
+          </div>
+      </div>
+      <div class="comment-post">hello commenti poveri</div>
+   </div>  
+</div>
+ 
+ 
+  <div class="comment-box">
+     <div class="user">
+        <div class="image"><img src="${pageContext.request.contextPath}/Immagini/vini.jpg" alt="image"></div>
+        <div class ="name">Gianluca</div>
+     </div>
+     <form action="" method="post">
+        <textarea name="comment" placeholder="Your Massege"></textarea>
+        <button class="comment-submit">Comment</button>
+     </form>
+</div>
+</div>
+
+
 </body>
 		<jsp:include page="Footer.jsp" />
 </html>
