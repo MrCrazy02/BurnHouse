@@ -3,6 +3,7 @@
     padding:0px;
     box-sizing: border-box;
     font-family: "Arial", sans-serif;
+    background: #F2F4F8;
 }
 
 
@@ -145,46 +146,109 @@
 /*recensioni*/
 /* Testimonials Section */
 /* start main rulez */
+/* Stile generale */
+.comment-box,
+.post-comment .list{
+	background: #fff;
+	border-radius: 6px;
+	box-shadow: 0 2px 2px #0002;
+}
 
+.comment-session{
+	width: 650px;/*650*/
+	height: auto;
+	margin: 0 auto;
+	 padding-bottom: 50px;
+}
 
-.parent {
-    position: relative;
-  overflow: hidden;
-  padding: 20px;
-  
-  
-  background-color: #F2F4F8;
+.post-comment .list{
+	width: 100%;
+	margin-bottom: 12px;
 }
-.testimonials {
-    color: #FFF;
-    position: relative;
-    padding-left: 15px;
-    display: flex;
-    height: 400px;
+
+.post-comment .list .user{
+	display: flex;
+	padding: 8px;
+	overflow: hidden;
 }
-.testimonials::before {
-    position: absolute;
-    content: '';
-    background: #FF7F50;
-    width: 50%;
-    height: 100%;
-    left: 0;
-    z-index: -1;
+
+.post-comment .list .user img{
+	height: 38px;
+	width: 38px;
+	margin-right: 10px;
+	border-radius: 50%;
 }
-.testimonials::after {
-    position: absolute;
-    content: '';
-    background: #CCCCFF;
-    width: 50%;
-    height: 100%;
-    top: 0;
-    left: 50%;
-    z-index: -1;
+
+.comment-session .name{
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.post-comment .list .day{
+	font-size: 12px;
+}
+
+.post-comment .comment-post{
+	padding: 0 0 15px 58px;
+}
+
+/*comment box*/
+.comment-box{
+	padding: 10px;
+	overflow: hidden;
+}
+
+.comment-box .user{
+	display: flex;
+	width: min-content;
+}
+
+.comment-box .image img{
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+
+.comment-box textarea{
+	background: #eee;
+	width: -webkit-fill-available;
+	height: 152px;
+	margin: 10px 0;
+	padding: 10px;
+	resize: inherit;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0 0 0 0.5px #0003;
+}
+
+.comment-box textarea:focus-visible{
+	box-shadow: inset 0 0 0 1px #009cff;
+	outline: none;
+}
+
+.comment-box .comment-submit{
+	float: right;
+	padding: 6px 10px;
+	border: none;
+	background: #009cff;
+	color: #eee;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.comment-box .comment-submit:hover{
+	background: #0076bf;	
+}
+
+@media screen and(max-width:660px){
+	.comment-session{width: 100%;}
 }
 
 
 .title-container {
   text-align: center;
+  padding: 20px;
 }
 
 .title {
@@ -198,48 +262,3 @@
   background-color: orange;
   margin: 10px auto;
 }
-
-
-.testimonials .testimonials-boxes {
-    /*
-    display: flex;
-    flex-direction: row;
-    margin-top: 140px;
-    margin-right: 45px;
-    */
-    
-    padding: 0 10vw;
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-}
-.testimonials .testimonials-boxes .box {
-    width: 33%;
-    height: 60%;
-    position: relative;
-    justify-content: space-between;
-    margin: 3%;
-    padding: 2px;
-    text-align: center;
-    color: #000;
-    background: #FFF;
-    border-radius: 15px 15px 0 15px;
-}
-.testimonials .testimonials-boxes  .box p {
-    font-size: 14px;
-    line-height: 1.5;
-}
-.testimonials .testimonials-boxes .box span {
-    font-size: 20px;
-}
-.testimonials .testimonials-boxes .box img {
-    width: 25%;
-    height: 45%;
-    right: -35px;
-    top: 142px;
-    border: 1px solid #FFF;
-    border-radius: 0 25% 25% 25%;
-    position: absolute;
-}
-
-
