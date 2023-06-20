@@ -94,7 +94,7 @@ public class RegistrationServlet extends HttpServlet {
 					
 				}
 				catch(SQLException e) {
-					e.printStackTrace();
+					response.sendRedirect("GeneralError.jsp");
 				}
 			}
 				
@@ -102,7 +102,7 @@ public class RegistrationServlet extends HttpServlet {
 			
 		}
 		catch(SQLException e) {
-			e.printStackTrace();
+			response.sendRedirect("GeneralError.jsp");
 		}
 		
 		
