@@ -67,7 +67,7 @@ public class Recensioni extends HttpServlet {
 					
 				}
 				catch(SQLException e) {
-					e.printStackTrace();
+					response.sendRedirect("GeneralError.jsp");
 				}
 			
 	
