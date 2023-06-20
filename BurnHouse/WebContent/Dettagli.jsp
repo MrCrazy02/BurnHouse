@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@ page import="java.util.*, model.ProductBean" %>
+<%@ page import="java.util.*, model.*" %>
 <% 
 	Boolean isAdmin = (Boolean) session.getAttribute("adminFilter");
 	Boolean isUser = (Boolean) session.getAttribute("userFilter");
@@ -73,67 +73,83 @@
   </div>
 </main>
 	
+
 	      <% 
 	}
 }
 %>
 
 
- <!-- prova -->
- <!-- TESTIMONIALS -->
-	<!-- linea 3 -->
-<!-- Testimonial -->
+
+
+<%
+	int cod=Integer.parseInt(request.getParameter("id"));
+	ShowRecensioni model = new ShowRecensioni();
+	Collection<Recensione> recensioni = model.mostraRecensioni(cod);
+%>
+
+
+
 <div class="title-container">
             <h1 class="title">RECENSIONI</h1>
             <div class="line"></div>
-          </div>
+</div>
+
+
+<%
+	for(Recensione review : recensioni){
+%>
+
 <div class = "comment-session">
-   <div class= "post-comment">
+
+   <div class= "post-comment"> 
       <div class= "list">
          <div class="user">
-          <div class="user-image"><img src="${pageContext.request.contextPath}/Immagini/banner_distillati.jpg" alt="image"></div>
-          <div class="user-meta">
-             <div class="name">Gianluca</div>
-             <div class="day">10 days ago</div>
+          <div class="user-image"><img src="${pageContext.request.contextPath}/Immagini/profilo.png" alt="image"></div>
+           <div class="user-meta">
+             <div class="name"><%=review.getUtente() %></div>
           </div>
-      </div>
-      <div class="comment-post">hello commenti poveri</div>
-   </div>  
-   
-   <div class= "list">
-         <div class="user">
-          <div class="user-image"><img src="${pageContext.request.contextPath}/Immagini/banner_distillati.jpg" alt="image"></div>
-          <div class="user-meta">
-             <div class="name">Gianluca</div>
-             <div class="day">10 days ago</div>
-          </div>
-      </div>
-      <div class="comment-post">hello commenti poveri</div>
-   </div>  
-   
-   <div class= "list">
-         <div class="user">
-          <div class="user-image"><img src="${pageContext.request.contextPath}/Immagini/banner_distillati.jpg" alt="image"></div>
-          <div class="user-meta">
-             <div class="name">Gianluca</div>
-             <div class="day">10 days ago</div>
-          </div>
-      </div>
-      <div class="comment-post">hello commenti poveri</div>
-   </div>  
-</div>
+      	 </div>
+      	 <div class="comment-post"><%=review.getValutazione()%></div>
+      </div>  
+   </div>
  
  
-  <div class="comment-box">
-     <div class="user">
-        <div class="image"><img src="${pageContext.request.contextPath}/Immagini/vini.jpg" alt="image"></div>
-        <div class ="name">Gianluca</div>
-     </div>
-     <form action="" method="post">
-        <textarea name="comment" placeholder="Your Massege"></textarea>
-        <button class="comment-submit">Comment</button>
-     </form>
-</div>
+
+  <% } %> 
+  
+	
+
+	
+	
+	<%if((isAdmin==null && isUser==null) || (isAdmin!=true && isUser!=true)){ %>
+	  <div class="comment-box">
+	     <div class="user">
+	        <div class="image"><img src="${pageContext.request.contextPath}/Immagini/profilo.png" alt="image"></div>
+	        <div class ="name">Utente</div>
+	     </div>
+	     <form action="NonPuoiCommentare.jsp" method="POST">
+	        <textarea name="valutazione" id="valutazione" placeholder="Scrivi una recensione"></textarea>
+	        <input type="hidden" id="email" name="email" value=<%=session.getAttribute("email")%> />
+	        <input type="hidden" id="prodotto" name="prodotto" value=<%=Integer.parseInt(request.getParameter("id"))%> />
+	        <button class="comment-submit">Commenta</button>
+	     </form>
+	  </div>
+	  <% }else{ %>
+	  <div class="comment-box">
+	     <div class="user">
+	        <div class="image"><img src="${pageContext.request.contextPath}/Immagini/profilo.png" alt="image"></div>
+	        <div class ="name"><%= session.getAttribute("email") %></div>
+	     </div>
+	     <form action="Recensioni" method="POST">
+	        <textarea name="valutazione" id="valutazione" placeholder="Scrivi una recensione"></textarea>
+	        <input type="hidden" id="email" name="email" value=<%=session.getAttribute("email")%> />
+	        <input type="hidden" id="prodotto" name="prodotto" value=<%=Integer.parseInt(request.getParameter("id"))%> />
+	        <button class="comment-submit">Commenta</button>
+	     </form>
+	  </div>  
+	  <%} %>
+	  
 </div>
 
 
