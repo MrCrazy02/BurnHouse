@@ -13,7 +13,8 @@
 	Collection<?> indirizzi=(Collection<?>)request.getSession().getAttribute("spedizioni"); 
 	
 	if(indirizzi.isEmpty()||indirizzi.equals(null)){
-		response.sendRedirect("InsIndirizzo.jsp");
+		RequestDispatcher disp=getServletContext().getRequestDispatcher("/InsIndirizzo.jsp");
+		disp.forward(request, response);
 	}%>
 <div id="indcontainer">
 
