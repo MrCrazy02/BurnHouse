@@ -113,7 +113,8 @@
       	 <div class="comment-post"><%=review.getValutazione()%></div>
       </div>  
    </div>
- 
+
+</div>
  
 
   <% } %> 
@@ -121,7 +122,7 @@
 	
 
 	
-	
+<div class = "comment-session">	
 	<%if((isAdmin==null && isUser==null) || (isAdmin!=true && isUser!=true)){ %>
 	  <div class="comment-box">
 	     <div class="user">
