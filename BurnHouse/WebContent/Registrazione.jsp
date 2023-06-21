@@ -9,22 +9,24 @@
     <link rel="stylesheet" type="text/css" href="./CSS/RegistrazioneStile.css">
 </head>
 <body>
-	
-	<div class="container">
-		<form action="RegistrationServlet" method="POST">
+
+	<div id="regis">
+	<div class="regcontainer">
+		<form action="RegistrationServlet" method="POST" class="registration">
 			<h1>Inserisci i tuoi dati</h1>
 			<div class="overlay">
-		        	<input type="text" id="nome" name="nome" required placeholder="Nome"><br><br>
-		        	<input type="text" id="cognome" name="cognome" required placeholder="Cognome"><br><br>
-		        	<input type="email" id="email" name="email" required placeholder="Email">
-		        	<input type="password" id="password" name="password" required placeholder="Password">
+		        	<input type="text" id="nome" name="nome" required placeholder="Nome" class="reg"><br><br>
+		        	<input type="text" id="cognome" name="cognome" required placeholder="Cognome" class="reg"><br><br>
+		        	<input type="email" id="email" name="email" required placeholder="Email" class="reg">
+		        	<input type="password" id="password" name="password" required placeholder="Password" class="reg">
 		        	<input type="date" id="data_nascita" name="data_nascita" required>
 					<br>
 					<br>
-					<button>Registrati</button>
+					<button class="submitreg">Registrati</button>
 			</div>
 		</form>
 	</div>
+</div>
 
 
 </body>

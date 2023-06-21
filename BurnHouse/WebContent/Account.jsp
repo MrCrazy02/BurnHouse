@@ -28,6 +28,10 @@
 		    <h3>Cognome: <%= session.getAttribute("cognome") %></h3>
 		    <h3>Email: <%= session.getAttribute("email") %></h3>
 		    <h3>Data di nascita: <%= session.getAttribute("dataNascita") %></h3>
+		    <h3>Inserisci metodo di pagamento</h3>
+		    <a href="InsIndirizzo.jsp"><h3>Inserisci indirizzo di spedizione</h3></a>
+		    <h3>Visualizza Metodi di Pagamento</h3></a>
+		    <a href="IndirizziServlet?action=show"><h3>Visualizza Indirizzi di spedizione</h3></a>
     	</div>
     </div>
     

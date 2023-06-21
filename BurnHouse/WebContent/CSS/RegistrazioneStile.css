@@ -7,7 +7,7 @@
 
 
 
-body {
+#regis {
 	background: #f6f5f7;
 	display: flex;
 	justify-content: center;
@@ -15,16 +15,16 @@ body {
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
-	margin: -20px 0 50px;
+	margin: auto;
 }
 
-h1 {
+h1.new {
 	
 	font-weight: bold;
-	margin: 0;
+	margin:0 ;
 }
 
-button {
+.submitreg {
 	border-radius: 20px;
 	border: 1px solid #D94965;
 	background-color: #D94965;
@@ -37,20 +37,20 @@ button {
 	transition: transform 80ms ease-in;
 }
 
-button:active {
+.submitreg:active {
 	transform: scale(0.95);
 }
 
-button:focus {
+.submitreg:focus {
 	outline: none;
 }
 
-button.ghost {
+.submitreg.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
 
-form {
+.registration {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -61,7 +61,7 @@ form {
 	text-align: center;
 }
 
-input {
+.reg {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -69,7 +69,7 @@ input {
 	width: 100%;
 }
 
-.container {
+.regcontainer {
 	background-color: #fff;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
