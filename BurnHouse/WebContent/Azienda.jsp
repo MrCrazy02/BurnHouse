@@ -16,12 +16,17 @@
 <body>
 <jsp:include page="Header.jsp" />
 
-<div id = "abpage-body">
+
+
+
+    <div class="title-container">
+            <h1 class="title">L'AZIENDA</h1>
+            <div class="line"></div>
+    </div>
+    
+    <div id = "abpage-body">
 
  <section class="abhero">
-    <div class="abheading">
-       <h1>L'azienda</h1>
-    </div>
     
     <div class="abcontainer">
        <div class="abhero-content">
@@ -39,7 +44,7 @@
           <button class="abcta-button">Learn More</button>
        </div>
        <div class="abhero-image">
-           <img class="abimg" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+           <img class="abimg" src="${pageContext.request.contextPath}/Immagini/fondatore.jpg" alt="whisky">
        </div>
     </div>
  </section>
@@ -54,7 +59,7 @@
     <div class="abcontainer">
     
     <div class="abhero-image">
-        <img class="abimg" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+        <img class="abimg" src="${pageContext.request.contextPath}/Immagini/produzione.jpg" alt="whisky">
     </div>
        <div class="abhero-content">
           <h2>La nostra storia</h2>
@@ -94,7 +99,7 @@
           <button class="abcta-button">Learn More</button>
        </div>
        <div class="abhero-image">
-          <img class="abimg" src="${pageContext.request.contextPath}/Immagini/banner_liquori.jpg" alt="whisky">
+          <img class="abimg" src="${pageContext.request.contextPath}/Immagini/famiglia.jpeg" alt="whisky">
        </div>
     </div>
  </section>

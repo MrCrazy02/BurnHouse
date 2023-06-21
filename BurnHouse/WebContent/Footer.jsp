@@ -40,13 +40,13 @@
 
 
         <div id="zonarightcenterfooter">
-          <h1>Assistenza clienti</h1>
+          <h1>Servizio Clienti</h1>
           <ul>
-            <li class= "selected"><a href="Azienda.jsp">Ultimi prodotti visti</a></li>
-            <li><a href="Azienda.jsp">Confronta i prodotti</a></li>
-            <li><a href="Azienda.jsp">I nuovi prodotti</a></li>
+            <li class= "selected"><a href="Azienda.jsp">Profilo</a></li>
+            <li><a href="Azienda.jsp">I miei ordini</a></li>
+            <li><a href="Azienda.jsp">Condizioni di reso</a></li>
             <li><a href="Azienda.jsp">Contatti</a></li>
-            <li><a href="Azienda.jsp">Mappa del sito</a></li>
+            <li><a href="Azienda.jsp">Dove siamo</a></li>
           </ul> 
         </div>
        
