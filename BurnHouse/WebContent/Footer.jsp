@@ -49,11 +49,16 @@
             <li><a href="Azienda.jsp">Mappa del sito</a></li>
           </ul> 
         </div>
-
-
+       
       </footer>
-
+      
+      <div id = "foot">
+      <hr>
+      </div>
+     
       <footer id="sotto">
+      
+      
         Design by Avella/Casaburi/Cataffo/Palumbo - Copyright © 2023 Burn House.
         Tutti i diritti riservati - P. IVA: 01465470902
       </footer>
