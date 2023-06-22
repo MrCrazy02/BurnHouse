@@ -32,16 +32,13 @@
        <div class="abhero-content">
           <h2>La nostra storia</h2>
           <p>
-             Tutelare e valorizzare le antiche tradizioni, con il sapiente uso dei frutti della propria terra.
-             Con questo spirito, quasi cent’anni fa, la famiglia Rau crea il primo laboratorio artigianale per la preparazione di 
-             liquori tipici: è l’inizio di una grande storia, che dura sino ai nostri giorni. 
-
-             Quella dell'azienda dei Fratelli RAU è una storia e una tradizione familiare cominciata nel 1926; da allora tre 
-             generazioni si sono succedute alla guida, dando vita a un'azienda moderna che oggi può contare sulle più avanzate 
-             tecnologie, pur conservando con orgoglio la passione per la genuinità e uno stretto legame con la propria terra per 
-             la preparazione di liquori, vini e dolci tipici sardi.
+             Quella dell'azienda dei Fratelli Leone è una storia e una tradizione familiare cominciata nel 1926; da allora tre 
+             generazioni si sono succedute alla guida, dando vita a un'azienda moderna leader nel settore della rivendita di vini, 
+             liquori e distillati. Grazie alla centenaria esperienza maturata nel settore del beverage, oggi continuiamo a veicolare 
+             online gli stessi valori di sempre: massima attenzione alle esigenze del cliente, scelta accurata di ogni singola 
+             etichetta proposta, rapporti duraturi con i nostri fornitori e clienti.
           </p>
-          <button class="abcta-button">Learn More</button>
+         <!-- <button class="abcta-button">Learn More</button>-->
        </div>
        <div class="abhero-image">
            <img class="abimg" src="${pageContext.request.contextPath}/Immagini/fondatore.jpg" alt="whisky">
@@ -62,18 +59,15 @@
         <img class="abimg" src="${pageContext.request.contextPath}/Immagini/produzione.jpg" alt="whisky">
     </div>
        <div class="abhero-content">
-          <h2>La nostra storia</h2>
+          <h2>Ingredienti speciali</h2>
           <p>
-             Tutelare e valorizzare le antiche tradizioni, con il sapiente uso dei frutti della propria terra.
-             Con questo spirito, quasi cent’anni fa, la famiglia Rau crea il primo laboratorio artigianale per la preparazione di 
-             liquori tipici: è l’inizio di una grande storia, che dura sino ai nostri giorni. 
-
-             Quella dell'azienda dei Fratelli RAU è una storia e una tradizione familiare cominciata nel 1926; da allora tre 
-             generazioni si sono succedute alla guida, dando vita a un'azienda moderna che oggi può contare sulle più avanzate 
-             tecnologie, pur conservando con orgoglio la passione per la genuinità e uno stretto legame con la propria terra per 
-             la preparazione di liquori, vini e dolci tipici sardi.
+             Ciò che rende speciale la nostra azienda, è senza dubbio l’amore per il lavoro che si fa. In ogni cosa va messa la 
+             giusta dose d’amore, in particolare nel lavoro in un’azienda come BurnHouse, che dal 1926 si impegna a fornire prodotti 
+             di alta qualità.
+             Un amore che traspare anche dallo sguardo del nostro Marco, qui mentre ha in braccio una bottiglia di Mirto 926, la 
+             nostra linea speciale di alta gamma.
           </p>
-          <button class="abcta-button">Learn More</button>
+          <!-- <button class="abcta-button">Learn More</button> -->
        </div>
        
     </div>
@@ -85,18 +79,15 @@
     
     <div class="abcontainer">
        <div class="abhero-content">
-          <h2>La nostra storia</h2>
+          <h2>La mission</h2>
           <p>
-             Tutelare e valorizzare le antiche tradizioni, con il sapiente uso dei frutti della propria terra.
-             Con questo spirito, quasi cent’anni fa, la famiglia Rau crea il primo laboratorio artigianale per la preparazione di 
-             liquori tipici: è l’inizio di una grande storia, che dura sino ai nostri giorni. 
-
-             Quella dell'azienda dei Fratelli RAU è una storia e una tradizione familiare cominciata nel 1926; da allora tre 
-             generazioni si sono succedute alla guida, dando vita a un'azienda moderna che oggi può contare sulle più avanzate 
-             tecnologie, pur conservando con orgoglio la passione per la genuinità e uno stretto legame con la propria terra per 
-             la preparazione di liquori, vini e dolci tipici sardi.
+             Una bottiglia non è solo una bottiglia, è molto di più.È convivialità, gioia, divertimento, riflessione, 
+             spensieratezza, risate, amore e condivisione. Vogliamo accompagnarvi in questi attimi di vita e rendervi parte 
+             integrante dei "racconti di vite"; mettere a disposizione la nostra sapienza per aiutarvi a trovare l’etichetta più 
+             adatta all’occasione; proporre sempre e solo prodotti di qualità che vi portino ad apprezzare fino in fondo la bellezza
+              di una degustazione; tramandarvi la nostra filosofia del bere responsabilmente.
           </p>
-          <button class="abcta-button">Learn More</button>
+          <!--  <button class="abcta-button">Learn More</button>-->
        </div>
        <div class="abhero-image">
           <img class="abimg" src="${pageContext.request.contextPath}/Immagini/famiglia.jpeg" alt="whisky">
