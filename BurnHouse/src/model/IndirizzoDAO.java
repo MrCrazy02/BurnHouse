@@ -115,7 +115,7 @@ public class IndirizzoDAO {
 			
 			
 			if((via!=null && !via.equals(""))&&(cap!=null && !cap.equals(""))&&(citta!=null && !citta.equals(""))&&(!utente.equals("") && utente!=null)) {
-				if(!ind.GetVia().equals(via)) {
+				if(!ind.GetVia().equals(via)||!ind.GetCap().equals(cap)||!ind.GetCitta().equals(citta)) {
 				query.setString(1, via);
 				query.setString(2, cap);
 				query.setString(3, citta);
@@ -164,14 +164,14 @@ public class IndirizzoDAO {
 				query2.setString(4, citta);
 				
 				query2.executeUpdate();
-				
-				
+				query.executeUpdate();				
 				
 				
 			}
 		}finally {
 			try {
-				if(query!=null||query2!=null) {query.close();
+				if(query!=null||query2!=null) {
+					query.close();
 				query2.close();
 				}
 			}finally {
@@ -216,5 +216,6 @@ public class IndirizzoDAO {
 		}
 		return indirizzi;
 	}
+	
 	
 }

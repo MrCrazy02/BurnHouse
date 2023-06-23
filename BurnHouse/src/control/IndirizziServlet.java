@@ -53,7 +53,7 @@ public class IndirizziServlet extends HttpServlet {
 				
 				int i=0;
 				while(i<indirizzi.size()) {
-					if(ind.GetVia().equals(indirizzi.get(i).GetVia())) {
+					if(ind.GetVia().equals(indirizzi.get(i).GetVia())&&(ind.GetCap().equals(indirizzi.get(i).GetCap()))&&(ind.GetCitta().equals(indirizzi.get(i).GetCitta()))) {
 						RequestDispatcher disp=getServletContext().getRequestDispatcher("/AlreadyIndPresent.jsp");
 						disp.forward(request, response);
 					}

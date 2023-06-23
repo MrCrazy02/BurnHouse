@@ -27,6 +27,8 @@ IndirizzoBean ind=(IndirizzoBean)it.next();%>
 <div class="cellind"><%=ind.GetVia() %></div>
 <div class="cellind"><%=ind.GetCap() %></div>
 <div class="cellind"><%=ind.GetCitta() %></div>
+<div class="cellind"><a href="IndirizziServlet?action=delete&via=<%=ind.GetVia() %>&cap=<%=ind.GetCap() %>&citta=<%=ind.GetCitta()%>" class="indlink">Rimuovi</a>
+</div>
 </div>
 <%} %>
 
