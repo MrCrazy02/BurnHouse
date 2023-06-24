@@ -1,0 +1,74 @@
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #000000;
+}
+
+
+
+#prova-body{
+	font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+	max-width: 900px;
+    margin: auto;
+    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 20px;
+    line-height: 26px;
+}
+
+#titolo-container {
+  text-align: center;
+  padding: 20px;
+}
+
+#titolo {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#linea {
+  width: 100px;
+  height: 2px;
+  background-color: orange;
+  margin: 10px auto;
+}
+
+
+
+    
+  .google-maps {
+  position: relative;
+  padding-bottom: 75%; /* Definisco l'aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+.google-maps > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.contact-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    
+    .contact-name {
+      font-weight: bold;
+    }
+
+
