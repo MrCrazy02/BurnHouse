@@ -7,8 +7,8 @@
 	
 <!DOCTYPE html>
 <html>
-<header id="cartheader">
-<%@ include file="Header.jsp" %></header>
+
+<%@ include file="Header.jsp" %>
 <%@ page import="java.util.*, model.Carrello,model.CartProduct" %>
 	<head>
 		<meta charset="UTF-8">
