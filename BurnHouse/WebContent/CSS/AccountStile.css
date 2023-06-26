@@ -24,6 +24,7 @@
 	    display: grid;
 	    justify-content: center;
 	    margin-bottom: 20px;
+	    line-height:1.5;
 	  }
 	  
 	.sinistra {
@@ -101,6 +102,16 @@
   background-color: #bf3364;
 }
 
+a.info{
+	color:black;
+	text-decoration:none;
+}
+
+a.info:hover{
+	color:blue;
+	text-decoration:underline;
+	font-style:italic;
+}
 
     
     

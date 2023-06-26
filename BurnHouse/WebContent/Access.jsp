@@ -6,18 +6,34 @@
 <meta charset="UTF-8">
 <title>Login</title>
 <link rel="stylesheet" type="text/css" href="./CSS/AccessStile.css">
-
 </head>
 <body>
+<script src="./script/jquery-3.5.1.js"></script>
+<script>
+function validation(obj){
+	const pattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	
+	if(obj.email.value.match(pattern)){	
+		obj.form.submit();
+	}
+	else{
+		$("#val").html("Email non valida");
+		obj.email.focus();
+		obj.reset();
+		
+	}
+}
+</script>
 
 <div class="container" id="container">
 	<div class="form-container sign-in-container">
 		<form action=LoginServlet method=post>
 			<h1>Accedi</h1>
-			<input type="email" name=email placeholder="Email" required/>
-			<input type="password" name=password placeholder="Password" required/>
+			<input type="email" name="email" placeholder="Email" required/>
+			<div id="val"></div>
+			<input type="password" name="password" placeholder="Password" required/>
 			<br>
-			<button>Accedi</button>
+			<button onclick="validation(this.form)">Accedi</button>
 		</form>
 	</div>
 	<div class="overlay-container">

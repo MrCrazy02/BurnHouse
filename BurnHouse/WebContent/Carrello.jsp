@@ -7,14 +7,15 @@
 	
 <!DOCTYPE html>
 <html>
-<%@ include file="Header.jsp" %>
+<header id="cartheader">
+<%@ include file="Header.jsp" %></header>
 <%@ page import="java.util.*, model.Carrello,model.CartProduct" %>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Carrello</title>
 		<link rel="stylesheet" type="text/css" href="./CSS/CarrelloStile.css">
-		<script type="text/javascript" src="script/jquery-3.5.1.js"></script>
+		<script type="text/javascript" src="./script/jquery-3.5.1.js"></script>
 		<script type="text/javascript">
 		$(document).ready(function(){
 			$(".Cart-Items").hide();
