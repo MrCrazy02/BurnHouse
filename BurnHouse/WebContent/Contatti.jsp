@@ -26,7 +26,7 @@
             
             <div class="left-side">
             <div class ="commentiamo">
-            <p>Per informazioni sulle spedizioni, sui pagamenti e sul funzionamento di BurnHouse, vai alle pagine <a href="SpedizionePagamenti.jsp">Spedizioni</a>, <a href="https://www.example.com">Pagamenti</a>, <a href="https://www.example.com">Servizio Clienti</a> .</p>
+            <p>Per informazioni sulle spedizioni, sui pagamenti e sul funzionamento di BurnHouse, vai alle pagine <a href="Comeordinare.jsp">Come Ordinare</a>, <a href="SpedizionePagamenti.jsp">Spedizione e pagamenti</a>, <a href="CondizioniVendita.jsp">Condizioni di vendita</a> .</p>
             </div>
             
             

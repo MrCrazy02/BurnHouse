@@ -3,7 +3,7 @@
 <html>
    <head>
       <meta charset="ISO-8859-1">
-      <title>Burn House</title>
+      <title>Spedizione e Pagamenti</title>
       <link rel="stylesheet" type="text/css" href="./CSS/ComeOrdinare.css">
    </head>
 

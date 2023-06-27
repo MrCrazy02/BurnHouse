@@ -3,7 +3,7 @@
 <html>
    <head>
       <meta charset="ISO-8859-1">
-      <title>Burn House</title>
+      <title>Condizioni di vendita</title>
       <link rel="stylesheet" type="text/css" href="./CSS/CondizioniVendita.css">
    </head>
 

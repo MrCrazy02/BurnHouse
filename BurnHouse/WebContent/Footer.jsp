@@ -44,9 +44,9 @@
           <ul>
             <li class= "selected"><a href="Azienda.jsp">Profilo</a></li>
             <li><a href="Azienda.jsp">I miei ordini</a></li>
-            <li><a href="Azienda.jsp">Condizioni di reso</a></li>
-            <li><a href="Azienda.jsp">Contatti</a></li>
-            <li><a href="Azienda.jsp">Dove siamo</a></li>
+            <li><a href="CondizioniReso.jsp">Condizioni di reso</a></li>
+            <li><a href="Contatti.jsp">Contatti</a></li>
+            <li><a href="Contatti.jsp">Dove siamo</a></li>
           </ul> 
         </div>
        
@@ -59,7 +59,7 @@
       <footer id="sotto">
       
       
-        Design by Avella/Casaburi/Cataffo/Palumbo - Copyright © 2023 Burn House.
+        Design by Avella/Casaburi/Palumbo - Copyright © 2023 Burn House.
         Tutti i diritti riservati - P. IVA: 01465470902
       </footer>
   </body>
