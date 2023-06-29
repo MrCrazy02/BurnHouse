@@ -96,7 +96,7 @@ public class PagamentoDAO {
 			Connection con=null;
 			PreparedStatement query=null;
 			LinkedList<Pagamento> metodi=new LinkedList<Pagamento>();
-			System.out.println("sono lollo");
+		
 			try {
 			con=ds.getConnection();
 			query=con.prepareStatement("Select * from "+table_name+" Where utente=?");

@@ -186,6 +186,17 @@ body {
  color: #202020;
 }
 
+button.checkout{
+	width:40%;
+	align-items:center;
+	background-color:black;
+	border-radius:10px;
+	font-size:30px;
+	font-style:italic;
+	font-family:'sans-serif';
+}
+
+
 
 a {
   color: #333;

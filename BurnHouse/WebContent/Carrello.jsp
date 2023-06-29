@@ -3,6 +3,7 @@
 <%	
 	Boolean isAdmin = (Boolean)session.getAttribute("adminFilter");
 	Boolean isUser = (Boolean) session.getAttribute("userFilter"); 
+
 %>
 	
 <!DOCTYPE html>
@@ -76,7 +77,12 @@
  				</div>
  				<div class="total-amount">€<%=String.format("%.2f", cart.TotalAmount()) %></div>
  				</div>
- 				
+ 				<br>
+ 				<%if((isUser.booleanValue() && isUser!=null)||(isAdmin.booleanValue() && isAdmin!=null)){ %>
+ 				<div class="button-container">
+ 				<button class="checkout"><a href="Checkout.jsp" class="cart">Checkout</a></button>
+ 				<%} %>
+ 				</div>
  				</div>
 			</div>
 		</div>
