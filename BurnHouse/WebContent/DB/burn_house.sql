@@ -159,5 +159,5 @@ INSERT INTO product values (60,"SAUVIGNON WINKL 2018",37.90,"Tra le colline che 
 
 
 
-INSERT INTO utente values ('user@user','user','user','user','2000-01-01','user');
-INSERT INTO utente values ('admin@admin','admin','admin','admin','2000-01-01','admin');
+INSERT INTO utente values ('user@user.com','user','user','user','2000-01-01','user');
+INSERT INTO utente values ('admin@admin.com','admin','admin','admin','2000-01-01','admin');
