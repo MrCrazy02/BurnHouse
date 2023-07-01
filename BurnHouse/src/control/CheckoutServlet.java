@@ -1,7 +1,6 @@
 package control;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
@@ -17,24 +16,18 @@ import model.Carrello;
 import model.OrderDAO;
 import model.Orderbean;
 
-/**
- * Servlet implementation class CheckoutServlet
- */
+
 @WebServlet("/CheckoutServlet")
 public class CheckoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
+	
     public CheckoutServlet() {
         super();
 
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action=request.getParameter("action");
 		String utente=(String)request.getSession().getAttribute("email");
@@ -52,12 +45,13 @@ public class CheckoutServlet extends HttpServlet {
 				SimpleDateFormat effettuazione=new SimpleDateFormat("YYYY-MM-dd");
 				String date=effettuazione.format(eff);
 				
-				richiesta.DoSave(cart, utente, ind, carta,date);
+				richiesta.DoSave(cart, utente, ind, carta, date);
 				RequestDispatcher disp=getServletContext().getRequestDispatcher("/Checkcompleto.jsp");
 				disp.forward(request, response);
 				
 			}catch(Exception e) {
 				response.sendRedirect("GeneralError.jsp");
+				
 			
 			}
 		}else if(action.equals("show")) {
@@ -74,9 +68,7 @@ public class CheckoutServlet extends HttpServlet {
 		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		doGet(request, response);

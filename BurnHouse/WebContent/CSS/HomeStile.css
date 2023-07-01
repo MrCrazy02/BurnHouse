@@ -395,7 +395,7 @@ Prodotti
   transform: translateX(-50%);
   padding: 10px;
   width: 90%;
-  text-transform: capitalize;
+
   border: none;
   outline: none;
   background: var(--secondary-color);
@@ -589,7 +589,6 @@ Prodotti
   transform: translateX(-50%);
   padding: 10px;
   width: 90%;
-  text-transform: capitalize;
   border: none;
   outline: none;
   background: var(--secondary-color);
@@ -787,7 +786,6 @@ Prodotti
   transform: translateX(-50%);
   padding: 10px;
   width: 90%;
-  text-transform: capitalize;
   border: none;
   outline: none;
   background: var(--secondary-color);

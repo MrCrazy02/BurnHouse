@@ -23,17 +23,18 @@ for(CartProduct c: cart.GetCart()){
 <div class="Cart-Items">
 				<div class="image-box">
 				<img src="${pageContext.request.contextPath}/Immagini/<%=c.GetImage()%>" alt="<%=c.GetNome() %>" class="cart-img">
-
 				</div>
+				
 				<div class="about">
 				<h2 class="title"><%=c.GetNome()%></h2>
 				<br><h3 class="subtitle"><%=c.getCapacity()%>cl</h3>
 				</div>
+				
 				<div class="counter">
 				<h2>Quantità</h2>
-				<div class="count"><%=c.GetQuantita()%></div>
-				
+				<div class="count"><%=c.GetQuantita()%></div>	
 				</div>
+				
 				<div class="prices">
 				<h2>Prezzo</h2> 
 				<div class="amount" >€<%=String.format("%.2f", c.GetPrezzo()*c.GetQuantita()) %></div>
@@ -80,7 +81,7 @@ for(CartProduct c: cart.GetCart()){
 <% PagamentoDAO richiesto=new PagamentoDAO(); 
 	Collection<Pagamento> metodi=richiesto.DoRetrieveByUser((String)request.getSession().getAttribute("email"));
 	if(metodi==null || metodi.isEmpty()){%>
-<button><a href="InsMetodoPag">Inserisci metodo di pagamento</a></button>
+<button><a href="InsMetodoPag.jsp">Inserisci metodo di pagamento</a></button>
 <%}else{
 	Iterator i=metodi.iterator();
 	while(i.hasNext()){

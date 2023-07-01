@@ -80,7 +80,7 @@
  				<br>
  				<%if((isUser!=null && isUser.booleanValue())||(isAdmin!=null && isAdmin.booleanValue())){ %>
  				<div class="button-container">
- 				<button class="checkout"><a href="Checkout.jsp" class="cart">Checkout</a></button>
+ 				<a href="Checkout.jsp" class="checkout-btn">Checkout</a>
  				<%} %>
  				</div>
  				</div>
