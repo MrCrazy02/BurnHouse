@@ -145,4 +145,58 @@
 }
 
 
+/*prova*/
+
+.botton-top {
+  display: none;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.prova {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D94965;
+}
+
+
+
+.prova ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-right: 100px;
+}
+
+.prova ul li {
+    margin-left: 100px;
+}
+
+.prova ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.prova ul li a:hover{
+    text-decoration: none;
+    color: red;
+    
+}
+
+
+
+.prova form {
+    margin: 10px;
+    align-items: center;
+    margin-right: 100px;
+    color: white;
+}
+
+
+
+
+
+
 
