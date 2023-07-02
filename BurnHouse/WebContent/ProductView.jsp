@@ -23,7 +23,7 @@
 <%@ page contentType="text/html; charset=UTF-8" import="java.util.*,model.ProductBean"%>
 <%@ page import="java.io.OutputStream" %>
 <%@ include file="Header.jsp" %>
-<hr>
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Catalogo BurnHouse</title>
@@ -56,7 +56,19 @@
 </script>
 <!-- eventuale chiusura </head>, apertura <body> -->
 <div class="icon">
+<!-- Modifica 
 <i class="fas fa-times"></i>
+-->
+<div class="outer">
+  <div class="inner">
+    <label>Back</label>
+  </div>
+</div>
+
+
+
+
+
 </div>
 
 <div id="menu">
@@ -83,7 +95,7 @@
 		</form>
 		</div>
 </div>
-</div>
+
 
 
 
