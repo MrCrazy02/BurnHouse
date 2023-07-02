@@ -43,17 +43,15 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
+	  $("#menu").hide(); // Nasconde il menu all'avvio
     $(".nav-container").click(function(){
       $("#menu").slideToggle();
     }); 
   });
 
-  
-  
-  
-  
-  
+
 </script>
+
 <!-- eventuale chiusura </head>, apertura <body> -->
  <div class="nav-container">
             <input class="checkbox" type="checkbox" name="" id="" />
@@ -63,11 +61,6 @@
               <span class="line line3"></span>
             </div>  
         </div>
-
-
-
-
-
 
 
 <div id="menu">
