@@ -4,8 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -75,53 +77,63 @@ public class ProductModelDS implements ProductModel {
 	}
 
 
-	@Override
-	public synchronized Collection<ProductBean> doRetrieveAll(String order) throws SQLException {
-		Connection connection = null;
-		PreparedStatement preparedStatement = null;
-
-		Collection<ProductBean> products = new LinkedList<ProductBean>();
-
-		String selectSQL = "SELECT * FROM " + ProductModelDS.TABLE_NAME;
-
-	    if (order != null && !order.equals("")) {
-	        selectSQL += " ORDER BY ?";
-	    }
-
-	    try {
-	        connection = ds.getConnection();
-	        preparedStatement = connection.prepareStatement(selectSQL);
-	        
-	        if (order != null && !order.equals("")) {
-	            preparedStatement.setString(1, order);
-	        }
-			ResultSet rs = preparedStatement.executeQuery();
-
-			while (rs.next()) {
-				ProductBean bean = new ProductBean();
-
-				bean.setCode(rs.getInt("codice"));
-				bean.setName(rs.getString("nome"));
-				bean.setPrice(rs.getDouble("prezzo"));
-				bean.setDescription(rs.getString("descrizione"));
-				bean.setDegree(rs.getFloat("gradazione"));
-				bean.setType(rs.getString("tipo"));
-				bean.setImg(rs.getString("img"));
-				bean.setCapacity(rs.getInt("capienza"));
-				products.add(bean);
-			}
-
-		} finally {
-			try {
-				if (preparedStatement != null)
-					preparedStatement.close();
-			} finally {
-				if (connection != null)
-					connection.close();
-			}
+	//usato per il doRetrieveAll
+		private String validateOrder(String order) {
+		    List<String> allowedOrders = Arrays.asList("codice", "nome", "prezzo");
+		    if (allowedOrders.contains(order)) {
+		        return order;
+		    }
+		    return null; 
 		}
-		return products;
-	}
+
+		@Override
+		public synchronized Collection<ProductBean> doRetrieveAll(String order) throws SQLException {
+			Connection connection = null;
+			PreparedStatement preparedStatement = null;
+
+			Collection<ProductBean> products = new LinkedList<ProductBean>();
+
+			String selectSQL = "SELECT * FROM " + ProductModelDS.TABLE_NAME;
+
+			 if (order != null && !order.isEmpty()) {
+			        String validatedOrder = validateOrder(order);
+			        if (validatedOrder != null) {
+			            selectSQL += " ORDER BY " + validatedOrder;
+			        }
+			    }
+
+		    try {
+		        connection = ds.getConnection();
+		        preparedStatement = connection.prepareStatement(selectSQL);
+		        
+		        
+				ResultSet rs = preparedStatement.executeQuery();
+
+				while (rs.next()) {
+					ProductBean bean = new ProductBean();
+
+					bean.setCode(rs.getInt("codice"));
+					bean.setName(rs.getString("nome"));
+					bean.setPrice(rs.getDouble("prezzo"));
+					bean.setDescription(rs.getString("descrizione"));
+					bean.setDegree(rs.getFloat("gradazione"));
+					bean.setType(rs.getString("tipo"));
+					bean.setImg(rs.getString("img"));
+					bean.setCapacity(rs.getInt("capienza"));
+					products.add(bean);
+				}
+
+			} finally {
+				try {
+					if (preparedStatement != null)
+						preparedStatement.close();
+				} finally {
+					if (connection != null)
+						connection.close();
+				}
+			}
+			return products;
+		}
 
 
 	@Override
