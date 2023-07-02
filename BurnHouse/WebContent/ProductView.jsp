@@ -43,7 +43,7 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
-    $(".icon").click(function(){
+    $(".nav-container").click(function(){
       $("#menu").slideToggle();
     }); 
   });
@@ -55,21 +55,20 @@
   
 </script>
 <!-- eventuale chiusura </head>, apertura <body> -->
-<div class="icon">
-<!-- Modifica 
-<i class="fas fa-times"></i>
--->
-<div class="outer">
-  <div class="inner">
-    <label>Back</label>
-  </div>
-</div>
+ <div class="nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+        </div>
 
 
 
 
 
-</div>
+
 
 <div id="menu">
   <div class="prova">
