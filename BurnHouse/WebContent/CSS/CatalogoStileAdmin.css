@@ -158,6 +158,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #D94965;
+    margin-top: 1px;
 }
 
 
@@ -167,6 +168,7 @@
     list-style: none;
     padding: 0;
     margin-right: 100px;
+    margin-left: 60px;
 }
 
 .prova ul li {
@@ -238,7 +240,7 @@
 
 .nav-container {
   display: block;
-  position: relative;
+  position: absolute;
   height: 60px;
 }
 
@@ -259,7 +261,7 @@
   height: 26px;
   width: 32px;
   position: absolute;
-  top: 17px;
+  top: 9px;
   left: 20px;
   z-index: 2;
   display: flex;
@@ -309,13 +311,7 @@
   font-weight: 500;
 }
 
-.logo {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  font-size: 1.2rem;
-  color: #0e2431;
-}
+
 
 
 
@@ -331,5 +327,9 @@
   transform: rotate(-45deg);
 }
 
+
+.totale{
+	display: flex;
+}
 
 
