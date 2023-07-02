@@ -145,4 +145,117 @@
 }
 
 
+/*prova*/
+
+.botton-top {
+  display: none;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.prova {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D94965;
+}
+
+
+
+.prova ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-right: 100px;
+}
+
+.prova ul li {
+    margin-left: 100px;
+}
+
+.prova ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.prova ul li a:hover{
+    text-decoration: none;
+    color: red;
+    
+}
+
+
+
+.prova form {
+    margin: 10px;
+    align-items: center;
+    margin-right: 100px;
+    color: white;
+}
+
+
+
+/*bottone prova*/
+    /* COLORS */
+.outer {
+  position: absolute;
+  margin: auto;
+  width: 40px;
+  /*margin-top: 200px;*/
+  cursor: pointer;
+}
+
+.inner {
+  width: inherit;
+  text-align: center;
+}
+
+.inner label { 
+  font-size: .7em; 
+  line-height: 3.8em;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all .3s ease-in;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.inner:before, .inner:after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: inherit;
+  background: #FFC107;
+  left: 0;
+  transition: all .3s ease-in;
+}
+
+.inner:before {
+  top: 50%; 
+  transform: rotate(45deg);  
+}
+
+.inner:after {  
+  bottom: 50%;
+  transform: rotate(-45deg);  
+}
+
+.outer:hover label {
+  opacity: 1;
+}
+
+.outer:hover .inner:before,
+.outer:hover .inner:after {
+  transform: rotate(0);
+}
+
+.outer:hover .inner:before {
+  top: 0;
+}
+
+.outer:hover .inner:after {
+  bottom: 0;
+}
+
 

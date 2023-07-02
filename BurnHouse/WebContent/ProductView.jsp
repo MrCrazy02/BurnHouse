@@ -23,7 +23,7 @@
 <%@ page contentType="text/html; charset=UTF-8" import="java.util.*,model.ProductBean"%>
 <%@ page import="java.io.OutputStream" %>
 <%@ include file="Header.jsp" %>
-<hr>
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Catalogo BurnHouse</title>
@@ -32,13 +32,54 @@
 	<% } else {%>
 	<link rel="stylesheet" type="text/css" href="./CSS/CatalogoStileUser.css">
 	<% } %>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <body>
+
+
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".icon").click(function(){
+      $("#menu").slideToggle();
+    }); 
+  });
+
+  
+  
+  
+  
+  
+</script>
+<!-- eventuale chiusura </head>, apertura <body> -->
+<div class="icon">
+<!-- Modifica 
+<i class="fas fa-times"></i>
+-->
+<div class="outer">
+  <div class="inner">
+    <label>Back</label>
+  </div>
+</div>
+
+
+
+
+
+</div>
+
+<div id="menu">
+  <div class="prova">
+     
+
+    
 	<ul>
-		<li><a href="product?sort=codice">Ordina i prodotti per codice</a></li>
-		<li><a href="product?sort=nome">Ordina i prodotti per nome</a></li>
-		<li><a href="product?sort=prezzo">Ordina i prodotti per prezzo</a></li>
+		<li><a href="product?sort=codice">Ordina per codice</a></li>
+		<li><a href="product?sort=nome">Ordina per nome</a></li>
+		<li><a href="product?sort=prezzo">Ordina per prezzo</a></li>
 		<%if(isAdmin!=null && isAdmin!=false){ %>
 		<li><a href="Insert.jsp" target="_blank" rel="noopener">Aggiungi prodotto al catalogo</a><br></li>
 		<%} %>  
@@ -52,9 +93,22 @@
 			  	<input type="text" name="maxGradazione" pattern="[0-9]+" required>
 			  	<button type="submit">Filtra</button>	  	
 		</form>
-		
-		
+		</div>
+</div>
 
+
+
+
+
+
+
+		
+		
+		
+		
+		
+		
+    
 		<%
 		
 		
@@ -71,6 +125,8 @@
 					ProductBean bean = (ProductBean) it.next();
 					
 		%>
+		
+	
 		  
 <div class="card-container">
 	<div class="card">
@@ -95,6 +151,9 @@
 
 	</div>
 </div>
+
+
+
 
 
 

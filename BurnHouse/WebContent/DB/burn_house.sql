@@ -24,8 +24,9 @@ utente varchar(100) not null,
 primary key(num_carta,utente),
 foreign key(utente) references utente(email)
 on update cascade
-on delete restrict
-);
+on delete restrict,
+titolare varchar(50) not null,
+scadenza varchar(10) not null);
 
 create table produttore(
 partita_iva char(11) primary key,
@@ -61,12 +62,12 @@ primary key(id,utente,prodotto)
 
 create table ordine(
 codice integer auto_increment primary key,
-prezzo decimal(4,2) not null,
-quantita integer not null,
+prezzo double not null,
 ind_spedizione varchar(50) not null,
 aliquota_IVA integer not null,
 utente varchar(100) not null references utente(email) on update cascade on delete no action,
-data_effettuazione date not null
+data_effettuazione date not null,
+num_carta varchar(20) not null
 );
 
 create table inclusione(
@@ -74,7 +75,8 @@ num_ordine integer not null,
 prodotto integer not null,
 primary key(num_ordine,prodotto),
 foreign key(num_ordine) references ordine(codice) on update no action on delete no action,
-foreign key(prodotto) references product(codice) on update cascade on delete no action
+foreign key(prodotto) references product(codice) on update cascade on delete no action,
+quantita integer not null
 );
 
 create table produzione(

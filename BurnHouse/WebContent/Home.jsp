@@ -122,7 +122,7 @@
 	        <img src="Immagini/<%=bean.getImg()%>" class="product-thumb1" alt="">
 	        </a>
 	         <a href="CartController?action=addCart&id=<%=bean.getCode()%>" class="buy">
-	        <button class="card-btn1">Aggiungi al carrello</button>
+	        <button class="card-btn1">AGGIUNGI AL CARRELLO</button>
 	        </a>
 	      </div>
 	      <div class="product-info1">
@@ -179,7 +179,7 @@
        <img src="Immagini/<%=bean2.getImg()%>" class="product-thumb2" alt="">
        </a>
        <a href="CartController?action=addCart&id=<%=bean2.getCode()%>" class="buy">
-        <button class="card-btn2">Aggiungi al carrello</button>
+        <button class="card-btn2">AGGIUNGI AL CARRELLO</button>
         </a>
       </div>
       <div class="product-info2">
@@ -234,7 +234,7 @@
         <img src="Immagini/<%=bean3.getImg()%>" class="product-thumb3" alt="">
         </a>
         <a href="CartController?action=addCart&id=<%=bean3.getCode()%>" class="buy">
-        <button class="card-btn3">Aggiungi al carrello</button>
+        <button class="card-btn3">AGGIUNGI AL CARRELLO</button>
         </a>
       </div>
       <div class="product-info3">
