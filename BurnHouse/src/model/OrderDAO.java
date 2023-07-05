@@ -38,14 +38,16 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		Orderbean order=new Orderbean();
+		String quer="SELECT * FROM "+table_name+" WHERE codice=?";
 		
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement("SELECT * FROM "+table_name+" WHERE codice=?");
+			query=con.prepareStatement(quer);
 			
 			query.setInt(1, codice);
 			ResultSet res=query.executeQuery();
 			if(res.next()) {
+				order.SetCode(res.getInt("codice"));
 				order.SetPrice(res.getDouble("prezzo"));
 				order.SetInd(res.getString("ind_spedizione"));
 				order.SetUser(res.getString("utente"));
@@ -68,10 +70,10 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
-		
+		String quer="SELECT * FROM "+table_name+" ORDER BY ?";
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement("SELECT * FROM "+table_name+" ORDER BY ?");
+			query=con.prepareStatement(quer);
 			
 			if(order!=null && !order.equals("")) {
 				query.setString(1, order);
@@ -80,6 +82,7 @@ public class OrderDAO {
 				
 				while(res.next()) {
 					Orderbean ordine=new Orderbean();
+					ordine.SetCode(res.getInt("codice"));
 					ordine.SetPrice(res.getDouble("prezzo"));
 					ordine.SetInd(res.getString("ind_spedizione"));
 					ordine.SetUser(res.getString("utente"));
@@ -103,10 +106,11 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
+		String quer="Select * from "+table_name+" where utente=?";
 		
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement("Select * from "+table_name+" where utente=?");
+			query=con.prepareStatement(quer);
 			
 			if(utente!=null && !utente.equals("")) {
 				query.setString(1, utente);
@@ -115,6 +119,7 @@ public class OrderDAO {
 				
 				while(res.next()) {
 					Orderbean ordine=new Orderbean();
+					ordine.SetCode(res.getInt("codice"));
 					ordine.SetPrice(res.getDouble("prezzo"));
 					ordine.SetInd(res.getString("ind_spedizione"));
 					ordine.SetUser(res.getString("utente"));
@@ -139,9 +144,10 @@ public class OrderDAO {
 		PreparedStatement query=null;
 		LinkedList <ProductBean> prod=new LinkedList<ProductBean>();
 		ProductModelDS prodotto=new ProductModelDS();
+		String quer="SELECT * FROM "+table2_name+" WHERE num_ordine=?";
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement("SELECT * FROM "+table2_name+" WHERE num_ordine=?");
+			query=con.prepareStatement(quer);
 			
 			query.setInt(1, order);
 			ResultSet res=query.executeQuery();
@@ -164,11 +170,13 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		PreparedStatement query2=null;
+		String quer1="DELETE FROM "+table_name+" WHERE codice=?";
+		String quer2="Delete from "+table2_name+" where num_ordine=?";
 		
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement("DELETE FROM "+table_name+" WHERE codice=?");
-			query2=con.prepareStatement("Delete from "+table2_name+" where num_ordine=?");
+			query=con.prepareStatement(quer1);
+			query2=con.prepareStatement(quer2);
 			
 			query2.executeUpdate();
 			query.executeUpdate();
@@ -176,10 +184,14 @@ public class OrderDAO {
 		}finally{
 			try {
 				if(query2!=null)query2.close();
-				if(query!=null)query.close();
+				
 			}finally {
-				if(con!=null)con.close();
-			}
+				try {
+				if(query2!=null)query2.close();
+				}finally{
+					if(con!=null)con.close();
+				}
+				}
 		}
 	}
 	
@@ -188,14 +200,15 @@ public class OrderDAO {
 		PreparedStatement query=null;
 		PreparedStatement query2=null;
 		Orderbean order=new Orderbean();
-		
+		String quer1="INSERT INTO "+table_name+" (prezzo,ind_spedizione,aliquota_IVA,utente,data_effettuazione,num_carta) VALUES(?,?,?,?,?,?)";
+		String quer2="INSERT INTO "+table2_name+" (num_ordine,prodotto,quantita) VALUES(?,?,?)";
 		Double tasse=(cart.TotalAmount()*22)/100;
 		LocalDate localDate=LocalDate.parse(date);
 		Date effettuazione=java.sql.Date.valueOf(localDate);
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement("INSERT INTO "+table_name+" (prezzo,ind_spedizione,aliquota_IVA,utente,data_effettuazione,num_carta) VALUES(?,?,?,?,?,?)");
-			query2=con.prepareStatement("INSERT INTO "+table2_name+" (num_ordine,prodotto,quantita) VALUES(?,?,?)");
+			query=con.prepareStatement(quer1);
+			query2=con.prepareStatement(quer2);
 			
 			if(cart!=null &&(utente!=null && !utente.equals("") && (indirizzo!=null && !indirizzo.equals("") && (carta!=null && !carta.equals(""))))) {
 				
@@ -220,9 +233,13 @@ public class OrderDAO {
 		}finally {
 			try {
 				if(query!=null) query.close();
-				if(query2!=null)query2.close();
+				
 			}finally {
-				if(con!=null)con.close();
+				try{
+					if(query2!=null)query2.close();
+				}finally {
+					if(con!=null)con.close();
+				}
 			}
 		}
 	}
@@ -231,10 +248,11 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		int code=0;
+		String quer="Select MAX(codice)as maxcode From "+table_name;
 		
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement("Select MAX(codice)as maxcode From "+table_name);
+			query=con.prepareStatement(quer);
 			ResultSet res=query.executeQuery();
 			
 			if(res.next()) {

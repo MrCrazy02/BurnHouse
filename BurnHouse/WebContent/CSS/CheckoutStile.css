@@ -147,7 +147,32 @@ body{
  color: #202020;
 }
 
+.ins{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #751f3d;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+ 
+  transition: background-color 0.3s ease;
+}
 
+
+.vai:link{
+	text-decoration:none;
+	font-size:15px;
+	
+}
+
+.vai:visited{
+	text-decoration:none;
+	font-style:oblique;
+	color: #FFFFFF;
+}
 
 h2.riepilogo{
 	text-align:center;
@@ -160,7 +185,7 @@ h2.riepilogo{
 	width:70%;
 	height:50%;
 	display:list;
-	flex-direction:column;
+
 	flex-wrap:wrap;
 	justify-content:center;
 	font-size:20px;

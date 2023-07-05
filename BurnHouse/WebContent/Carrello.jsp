@@ -21,6 +21,8 @@
 		$(document).ready(function(){
 			$(".Cart-Items").hide();
 		$(".Heading").click(function(){$(".Cart-Items").slideToggle();});
+		$(".Cart-Container").hover(function(){$(this).css("overflow-y","scroll");},function(){$(this).css("overflow-y","hidden");});
+		
 		});
 		</script>
 	</head>

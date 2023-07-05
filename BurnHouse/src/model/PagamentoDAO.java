@@ -32,9 +32,10 @@ public class PagamentoDAO {
 			Connection con=null;
 			PreparedStatement query=null;
 			Pagamento pago=new Pagamento();
+			String quer="Select * from "+table_name+" Where num_carta=? AND utente=?";
 			try {
 				con=ds.getConnection();
-				query=con.prepareStatement("Select * from "+table_name+" Where num_carta=? AND utente=?");
+				query=con.prepareStatement(quer);
 				
 				if((carta!=null && !carta.equals("")&&(utente!=null && !utente.equals("")))) {
 					query.setString(1, carta);
@@ -63,10 +64,11 @@ public class PagamentoDAO {
 			Connection con=null;
 			PreparedStatement query=null;
 			LinkedList<Pagamento> metodi=new LinkedList<Pagamento>();
+			String quer="Select * from "+table_name+" Order by ?";
 			
 			try {
 				con=ds.getConnection();
-				query=con.prepareStatement("Select * from "+table_name+" Order by ?");
+				query=con.prepareStatement(quer);
 				
 				if(order!=null && !order.equals("")) {
 					query.setString(1, order);
@@ -96,10 +98,10 @@ public class PagamentoDAO {
 			Connection con=null;
 			PreparedStatement query=null;
 			LinkedList<Pagamento> metodi=new LinkedList<Pagamento>();
-		
+			String quer="Select * from "+table_name+" Where utente=?";
 			try {
 			con=ds.getConnection();
-			query=con.prepareStatement("Select * from "+table_name+" Where utente=?");
+			query=con.prepareStatement(quer);
 			
 			if(user!=null && !user.equals("")) {
 				query.setString(1, user);
@@ -129,12 +131,13 @@ public class PagamentoDAO {
 			Connection con=null;
 			PreparedStatement query=null;
 			Pagamento pago=this.DoRetrieveByKey(num,user);
+			String quer="INSERT INTO "+table_name+" VALUES(?,?,?,?)";
 			
 			if(pago.GetNum().equals(num) && pago.GetUtente().equals(user)) {System.out.println("sono"); return false;}
 			
 			try {
 				con=ds.getConnection();
-				query=con.prepareStatement("INSERT INTO "+table_name+" VALUES(?,?,?,?)");
+				query=con.prepareStatement(quer);
 				
 				if((num!=null && !num.equals(""))&&(user!=null && !user.equals(""))&&(titolare!=null && !titolare.equals(""))&&(date!=null && !date.equals(""))) {
 					query.setString(1, num);
@@ -157,10 +160,10 @@ public class PagamentoDAO {
 		public synchronized void DoDelete(String num, String user) throws SQLException{
 			Connection con=null;
 			PreparedStatement query=null;
-			
+			String quer="DELETE FROM "+table_name+" WHERE num_carta=? AND utente=?";
 			try {
 				con=ds.getConnection();
-				query=con.prepareStatement("DELETE FROM "+table_name+" WHERE num_carta=? AND utente=?");
+				query=con.prepareStatement(quer);
 				
 				if((num!=null && !num.equals(""))&&(user!=null && !user.equals(""))){
 					query.setString(1, num);

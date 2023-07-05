@@ -35,12 +35,12 @@ public class IndirizzoDAO {
 	public synchronized IndirizzoBean DoRetrieveByKey(String via, String cap, String citta) throws SQLException{
 		Connection con=null;
 		PreparedStatement query=null;
-		
+		String quer="Select * From "+table_name+" Where via=? AND cap=? AND citta=?";
 		IndirizzoBean ind=new IndirizzoBean();
 		
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement("Select * From "+table_name+" Where via=? AND cap=? AND citta=?");
+			query=con.prepareStatement(quer);
 			if((via!=null && !via.equals(""))&&(cap!=null && !cap.equals(""))&&(citta!=null && !citta.equals(""))) {
 				query.setString(1, via);
 				query.setString(2, cap);
@@ -73,11 +73,11 @@ public class IndirizzoDAO {
 		
 		IndirizzoBean ind=new IndirizzoBean();
 		ArrayList<IndirizzoBean> indirizzi=new ArrayList<IndirizzoBean>();
-		
+		String quer="Select * From "+table_name+" Order by ?";
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement("Select * From "+table_name+" Order by ?");
-			if(order!=null && order!="") {
+			query=con.prepareStatement(quer);
+			if(order!=null && !order.equals("")) {
 				query.setString(1, order);
 				
 				ResultSet res=query.executeQuery();
@@ -105,13 +105,15 @@ public class IndirizzoDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		PreparedStatement query2=null;
+		String quer1="INSERT INTO "+table_name+" Values(?,?,?)";
+		String quer2="INSERT INTO "+table2_name+" VALUES(?,?,?,?)";
 		IndirizzoBean ind=new IndirizzoBean();
 		ind=this.DoRetrieveByKey(via, cap, citta);
 		
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement("INSERT INTO "+table_name+" Values(?,?,?)");
-			query2=con.prepareStatement("INSERT INTO "+table2_name+" VALUES(?,?,?,?)");
+			query=con.prepareStatement(quer1);
+			query2=con.prepareStatement(quer2);
 			
 			
 			if((via!=null && !via.equals(""))&&(cap!=null && !cap.equals(""))&&(citta!=null && !citta.equals(""))&&(!utente.equals("") && utente!=null)) {
@@ -135,12 +137,18 @@ public class IndirizzoDAO {
 			
 		}finally {
 			try {
-				if(query!=null||query2!=null) {query.close();
-				query2.close();
+				if(query!=null) {
+					query.close();
+				
 				}
 			}finally {
+				try {
+				if(query2!=null)query.close();	
+				
+				}finally {
 				if(con!=null)con.close();
-			}
+				}
+				}
 		}
 	}
 	
@@ -148,11 +156,12 @@ public class IndirizzoDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		PreparedStatement query2=null;
-		
+		String quer1="DELETE FROM "+table_name+" WHERE via=? AND cap=? AND citta=?";
+		String quer2="DELETE FROM "+table2_name+" WHERE utente=? AND via=? AND cap=? AND citta=?";
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement("DELETE FROM "+table_name+" WHERE via=? AND cap=? AND citta=?");
-			query2=con.prepareStatement("DELETE FROM "+table2_name+" WHERE utente=? AND via=? AND cap=? AND citta=?");
+			query=con.prepareStatement(quer1);
+			query2=con.prepareStatement(quer2);
 			
 			if((via!=null && !via.equals(""))&&(cap!=null && !cap.equals(""))&&(citta!=null && !citta.equals(""))&&(!utente.equals("") && utente!=null)) {
 				query.setString(1, via);
@@ -170,13 +179,17 @@ public class IndirizzoDAO {
 			}
 		}finally {
 			try {
-				if(query!=null||query2!=null) {
+				if(query!=null) {
 					query.close();
-				query2.close();
 				}
 			}finally {
+				try {
+				if(query2!=null)query.close();
+					
+				}finally {
 				if(con!=null)con.close();
-			}
+				}
+				}
 			
 		}
 	}
@@ -185,12 +198,12 @@ public class IndirizzoDAO {
 	public synchronized ArrayList<IndirizzoBean> DoRetrieveByUser(String user) throws SQLException{
 		Connection con=null;
 		PreparedStatement query=null;
-		
+		String quer="Select via,cap,citta from "+table2_name+" Where utente=?";
 		ArrayList<IndirizzoBean> indirizzi=new ArrayList<IndirizzoBean>();
 		
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement("Select via,cap,citta from "+table2_name+" Where utente=?");
+			query=con.prepareStatement(quer);
 			
 			if(user!=null && (!user.equals("")))
 			{

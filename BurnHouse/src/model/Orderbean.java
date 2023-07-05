@@ -1,10 +1,12 @@
 package model;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class Orderbean {
-private static int increment=1;
+
 private int codice;
 private double prezzo;
 private String indirizzo="";
@@ -19,11 +21,6 @@ public Orderbean() {
 
 public void SetCode(int code) {
 	this.codice=code;
-}
-
-public void AddCode() {
-	this.codice=increment;
-	increment++;
 }
 
 public int GetCode() {
@@ -67,11 +64,15 @@ public void SetDate(Date date) {
 	this.date.setTime(date);
 }
 
-public GregorianCalendar GetDate() {
-	return this.date;
+public String GetDate() {
+	SimpleDateFormat pattern=new SimpleDateFormat("dd/MM/YYYY");
+	String date=pattern.format(this.date.getTime());
+	return date;
 }
 
 public void SetCarta(String cart) {
 	this.carta=cart;
 }
+
+
 }

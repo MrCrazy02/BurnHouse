@@ -38,7 +38,7 @@
     
     <div class="destra">
     	<div class="ordini">
-    		<a href="">RIEPILOGO ORDINI</a>
+    		<a href="CheckoutServlet?action=show">RIEPILOGO ORDINI</a>
     	</div>
 	  	<div class="exit-button">
   			<a href="LogoutServlet">ESCI</a>
