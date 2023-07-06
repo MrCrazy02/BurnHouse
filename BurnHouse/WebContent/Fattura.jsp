@@ -49,7 +49,10 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
 	String Ordine=request.getParameter("nOrdine");
 	int nOrdine = Integer.parseInt(Ordine);
     OrderDAO model = new OrderDAO();
-    Collection<ProductBean> orders = model.DoRetrieveByOrder(nOrdine);
+    Collection<ProductBean> products = model.DoRetrieveByOrder(nOrdine);
+    String codice=request.getParameter("code");
+    int cod=Integer.parseInt(codice);
+    Orderbean ordine = model.DoRetrieveByKey(cod);
 	%>
 
 	
@@ -65,6 +68,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   String data=request.getParameter("data");
   String nome=request.getParameter("nome");
   String cognome=request.getParameter("cognome");
+  String indirizzo=ordine.GetInd();
   %>
   
   <table>
@@ -82,7 +86,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
     </tr>
     <tr>
       <th>Indirizzo di spedizione:</th>
-      <td>????</td>
+      <td><%=indirizzo%></td>
     </tr>
   </table>
   
@@ -98,7 +102,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
       <th>Totale</th>
     </tr>
     
-    <% for (ProductBean bean : orders) { %>
+    <% for (ProductBean bean : products) { %>
     <tr>
       <td><%=bean.getName() %></td>
       <td>????</td>
@@ -118,4 +122,3 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   </div>
 </body>
 </html>
-

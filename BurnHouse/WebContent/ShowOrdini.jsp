@@ -28,7 +28,7 @@
 		<div class="headorder"><span class="acq">Acquirente: <%=request.getSession().getAttribute("nome") %>
 			<%=request.getSession().getAttribute("cognome") %></span><h3 class="number">Ordine n.<%=order.GetCode() %>
 			<br>
-			<a href="Fattura.jsp?data=<%=order.GetDate()%>&nome=<%=request.getSession().getAttribute("nome")%>&cognome=<%=request.getSession().getAttribute("cognome")%>&nOrdine=<%=order.GetCode() %>">Fattura</a>
+			<a href="Fattura.jsp?code=<%=order.GetCode() %>&data=<%=order.GetDate()%>&nome=<%=request.getSession().getAttribute("nome")%>&cognome=<%=request.getSession().getAttribute("cognome")%>&nOrdine=<%=order.GetCode() %>">Fattura</a>
 			</h3>
 			<span class="date">Data effettuazione:<br><%=order.GetDate() %></span>
 		</div>
