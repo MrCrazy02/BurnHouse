@@ -10,12 +10,6 @@
 	<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">-->
 	<link rel="stylesheet" type="text/css" href="./CSS/HomeStile.css">
 
-	
-	
-	  
-
-	
-
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -81,13 +75,12 @@
 	
 
 
-	<section class="banner clearfix">
-		<div class="banner__image">
-		<img class="card__image"src="${pageContext.request.contextPath}/Immagini/vini.jpg" alt="Nature">
+	<section class="banner clearfix" >
+		<div class="banner__image" >
+		<img class="card__image"src="${pageContext.request.contextPath}/Immagini/vini.jpg" style="width:100%;" alt="Nature">
 		</div>
 		<div class="banner__copy">
 			<div class="banner__copy__text">
-				<!--  <h3>Vini italiani</h3>-->
 			</div>
 		</div>
 	</section>
@@ -142,7 +135,7 @@
     
     <section class="banner clearfix">
 		<div class="banner__image">
-		<img class="card__image"src="${pageContext.request.contextPath}/Immagini/liquori.png" alt="Nature">
+		<img class="card__image"src="${pageContext.request.contextPath}/Immagini/liquori.png" style="width:100%;" alt="Nature">
 		</div>
 		<div class="banner__copy">
 			<div class="banner__copy__text">
@@ -201,7 +194,7 @@
 	
 	<section class="banner clearfix">
 		<div class="banner__image">
-		<img class="card__image"src="${pageContext.request.contextPath}/Immagini/distillati.jpg" alt="Nature">
+		<img class="card__image"src="${pageContext.request.contextPath}/Immagini/distillati.jpg" style="width:100%;" alt="Nature">
 		</div>
 		<div class="banner__copy">
 			<div class="banner__copy__text">

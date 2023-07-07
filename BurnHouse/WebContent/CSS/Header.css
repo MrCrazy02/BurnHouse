@@ -175,5 +175,14 @@ h2 { font-size: 130%; }
   text-align: center;
 }
             
+    /* Add responsive styles here */
+    @media (max-width: 768px) {
+      /* Styles for screens up to 768px wide */
+      /* Example: change the width of the search box input */
+      #search-box-input {
+        width: 100%;
+        margin-left: 0;
+      }
 
+    }
 
