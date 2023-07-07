@@ -1,11 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
+    pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.CartProduct"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Ordini effettuati</title>
 <link rel="stylesheet" type="text/css" href="./CSS/Showorder.css">
+<script src="./script/jquery-3.5.1.js" type="text/javascript">
+</script>
+<script>
+$(document).ready(function(){
+	$(".ordercont").hide();
+	$(".headorder").click(function(){
+		$(this).nextAll(".ordercont").slideToggle();
+	});
+	
+});
+</script>
 </head>
 
 <body>
@@ -32,20 +43,20 @@
 			</h3>
 			<span class="date">Data effettuazione:<br><%=order.GetDate() %></span>
 		</div>
-		<%Collection<ProductBean> prodorder=(Collection<ProductBean>)tutto.get(order.GetCode()); 
-			Iterator<ProductBean> i=prodorder.iterator();
+		<%Collection<CartProduct> prodorder=(Collection<CartProduct>)tutto.get(order.GetCode()); 
+			Iterator<CartProduct> i=prodorder.iterator();
 			while(i.hasNext()){
-				ProductBean prod=i.next();%>
+				CartProduct prod=i.next();%>
 				<div class="ordercont">
 				
 				
 				
-					<a href ="Dettagli.jsp?id=<%=prod.getCode()%>" target="_blank" rel="noopener">
-						<img src="${pageContext.request.contextPath}/Immagini/<%=prod.getImg()%>" alt="Immagine non disponibile" class="orderimg">
+					<a href ="Dettagli.jsp?id=<%=prod.GetCode()%>" target="_blank" rel="noopener">
+						<img src="${pageContext.request.contextPath}/Immagini/<%=prod.GetImage()%>" alt="Immagine non disponibile" class="orderimg">
 					</a>
 					
 					<h3 class="about">
-						<a href ="Dettagli.jsp?id=<%=prod.getCode()%>" target="_blank" rel="noopener"><%=prod.getName()%></a>
+						<a href ="Dettagli.jsp?id=<%=prod.GetCode()%>" target="_blank" rel="noopener"><%=prod.GetNome()%></a>
 						<br>
 						<%=prod.getCapacity() %>cl
 					</h3>
@@ -53,7 +64,7 @@
 					<div class="price">
 						Prezzo
 						<br>
-						€<%=String.format("%.2f", prod.getPrice())%> 
+						€<%=String.format("%.2f", prod.GetPrezzo())%>
 					</div>
 				</div>
 		  <%}%>

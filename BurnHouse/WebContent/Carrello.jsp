@@ -19,8 +19,6 @@
 		<script type="text/javascript" src="./script/jquery-3.5.1.js"></script>
 		<script type="text/javascript">
 		$(document).ready(function(){
-			$(".Cart-Items").hide();
-		$(".Heading").click(function(){$(".Cart-Items").slideToggle();});
 		$(".Cart-Container").hover(function(){$(this).css("overflow-y","scroll");},function(){$(this).css("overflow-y","hidden");});
 		
 		});

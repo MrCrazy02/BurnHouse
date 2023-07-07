@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 import model.Carrello;
+import model.CartProduct;
 import model.OrderDAO;
 import model.Orderbean;
 import model.ProductBean;
@@ -60,11 +61,11 @@ public class CheckoutServlet extends HttpServlet {
 			try {
 				Collection<Orderbean> ordini=richiesta.DoRetrieveByUser(utente);
 				request.getSession().setAttribute("ordini", ordini);
-				HashMap<Integer,Collection<ProductBean>> tutto= new HashMap<Integer,Collection<ProductBean>>();
+				HashMap<Integer,Collection<CartProduct>> tutto= new HashMap<Integer,Collection<CartProduct>>();
 				Iterator<Orderbean> it=ordini.iterator();
 				while(it.hasNext()) {
 					int i=it.next().GetCode();
-					Collection<ProductBean> prod=richiesta.DoRetrieveByOrder(i);
+					Collection<CartProduct> prod=richiesta.DoRetrieveByOrder(i);
 					tutto.put(i,prod);
 				}
 				request.getSession().setAttribute("prodorder", tutto);

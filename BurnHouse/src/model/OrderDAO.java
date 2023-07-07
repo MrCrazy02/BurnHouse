@@ -138,10 +138,10 @@ public class OrderDAO {
 		return ordini;
 	}
 	
-	public synchronized Collection <ProductBean>DoRetrieveByOrder(int order) throws SQLException{
+	public synchronized Collection <CartProduct>DoRetrieveByOrder(int order) throws SQLException{
 		Connection con=null;
 		PreparedStatement query=null;
-		LinkedList <ProductBean> prod=new LinkedList<ProductBean>();
+		LinkedList <CartProduct> prod=new LinkedList<CartProduct>();
 		ProductModelDS prodotto=new ProductModelDS();
 		String quer="SELECT * FROM "+table2_name+" WHERE num_ordine=?";
 		try {
@@ -153,7 +153,14 @@ public class OrderDAO {
 			
 			while(res.next()) {
 				ProductBean ordine=prodotto.doRetrieveByKey(res.getInt("prodotto"));
-				prod.add(ordine);
+				CartProduct cart=new CartProduct();
+				cart.SetCode(ordine.getCode());
+				cart.setCapacity(ordine.getCapacity());
+				cart.SetNome(ordine.getName());
+				cart.SetPrezzo(ordine.getPrice());
+				cart.SetImage(ordine.getImg());
+				cart.SetQuantita(res.getInt("quantita"));
+				prod.add(cart);
 			}
 		}finally {
 			try {
