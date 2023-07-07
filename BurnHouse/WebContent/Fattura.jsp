@@ -49,7 +49,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
 	String Ordine=request.getParameter("nOrdine");
 	int nOrdine = Integer.parseInt(Ordine);
     OrderDAO model = new OrderDAO();
-    Collection<ProductBean> products = model.DoRetrieveByOrder(nOrdine);
+    Collection<CartProduct> products = model.DoRetrieveByOrder(nOrdine);
     String codice=request.getParameter("code");
     int cod=Integer.parseInt(codice);
     Orderbean ordine = model.DoRetrieveByKey(cod);
@@ -74,7 +74,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   <table>
     <tr>
       <th>Numero fattura:</th>
-      <td>????</td>
+      <td><%=nOrdine %></td>
     </tr>
     <tr>
       <th>Data fatturazione:</th>
@@ -102,17 +102,17 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
       <th>Totale</th>
     </tr>
     
-    <% for (ProductBean bean : products) { %>
+    <% for (CartProduct bean : products) { %>
     <tr>
-      <td><%=bean.getName() %></td>
-      <td>????</td>
-      <td><%=bean.getPrice() %>€</td>
-      <td>????€</td>
+      <td><%=bean.GetNome() %></td>
+      <td><%=bean.GetQuantita() %></td>
+      <td><%=bean.GetPrezzo() %>€</td>
+      <td><%=bean.GetPrezzo()*bean.GetQuantita() %>€</td>
     </tr>
 	<%} %>  
   </table>
   
-  <h2>Totale: <%=request.getParameter("totalprice")%>€</h2>
+  <h2>Totale: <%=String.format("%.2f", ordine.GetPrice())%>€</h2>
 
 
     <br>
