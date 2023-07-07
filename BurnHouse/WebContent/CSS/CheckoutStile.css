@@ -1,17 +1,31 @@
 body{
 	font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+	background-color: #F2F4F8;
 }
 
 
 
 
 #Checkout{
+	/*
 	display:flex;
 	flex-direction:row;
 	flex-wrap:wrap;
 	width:100%;
 	height:100%;
-	margin:0 auto 10px auto;
+	margin: 50px;
+	background-color: #F2F4F8;
+	border: 10px solid #fff;
+	*/
+	max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #2c2f48;
+    margin-bottom: 20px;
 	
 }
 
@@ -37,8 +51,10 @@ body{
 }
 
 .Cart-Items{
+	/*
  width: 95%;
  height: 40%;
+ */
  display: flex;
  justify-content: space-between;
  align-items: center;
@@ -67,6 +83,7 @@ body{
  align-items:left;
 }
 
+/*
 .title{
  padding-top: 5px;
  line-height: 13px;
@@ -75,6 +92,7 @@ body{
  font-weight: 800;
  color: #202020;
 }
+*/
 
 .subtitle{
  line-height: 10px;
@@ -230,4 +248,25 @@ form#checkmate{
 
 input[type="radio"]:checked + label::after{
 	content:url(../Immagini/spunta-verde.png);
+}
+
+
+
+
+.title-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #F2F4F8;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: orange;
+  margin: 10px auto;
 }

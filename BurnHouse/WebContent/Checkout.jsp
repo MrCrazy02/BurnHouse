@@ -12,7 +12,10 @@
 </head>
 <body>
 <%@include file="Header.jsp" %>
-<h1 id="check">Checkout In corso</h1>
+ <div class="title-container">
+            <h1 class="title">CHECKOUT</h1>
+            <div class="line"></div>
+</div>
 <div id="Checkout">
 
 <div id="Cart">
