@@ -12,7 +12,12 @@
 </head>
 <body>
 <%@include file="Header.jsp" %>
-<h1 id="check">Checkout In corso</h1>
+ <div class="title-container">
+            <h1 class="title">CHECKOUT</h1>
+            <div class="line"></div>
+</div>
+
+
 <div id="Checkout">
 
 <div id="Cart">
@@ -20,7 +25,11 @@
 <% Carrello cart=(Carrello)request.getSession().getAttribute("cart");
 for(CartProduct c: cart.GetCart()){
 %>
+
+
+<div class='line-check'></div>
 <div class="Cart-Items">
+                
 				<div class="image-box">
 				<img src="${pageContext.request.contextPath}/Immagini/<%=c.GetImage()%>" alt="<%=c.GetNome() %>" class="cart-img">
 				</div>
@@ -41,6 +50,7 @@ for(CartProduct c: cart.GetCart()){
 				</div>
 				
 			</div>
+			
 			<%} %>
 			<hr class="Cart-Line"> 
  				<div class="checkout">
