@@ -21,7 +21,7 @@
     <div class="hero__content reveal">
       <p class="intro-text">Distilleria artigianale</p>
       <h1 class="big-text">Burn House</h1>
-      <a href="" class="button">Maggiori informazioni</a>
+      <a href="Azienda.jsp" class="button">Maggiori informazioni</a>
     </div>
     
     <video autoplay muted loop id="video-back">

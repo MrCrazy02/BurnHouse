@@ -2,6 +2,10 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%
+	Boolean adm = (Boolean)session.getAttribute("adminFilter"); 
+	Boolean use = (Boolean)session.getAttribute("userFilter");	
+%>
 
 <!DOCTYPE html>
 <html>
@@ -42,8 +46,16 @@
         <div id="zonarightcenterfooter">
           <h1>Servizio Clienti</h1>
           <ul>
-            <li class= "selected"><a href="Azienda.jsp">Profilo</a></li>
-            <li><a href="Azienda.jsp">I miei ordini</a></li>
+          <%if((adm==null || adm==false) && (use==null || use==false)){ %>
+          	<li class= "selected"><a href="Access.jsp">Profilo</a></li>
+          <%}else{ %>
+            <li class= "selected"><a href="Account.jsp">Profilo</a></li>
+           <%} %>
+           <%if((adm==null || adm==false) && (use==null || use==false)){ %>
+          	<li class= "selected"><a href="Access.jsp">I miei ordini</a></li>
+          <%}else{ %>
+            <li><a href="ShowOrdini.jsp">I miei ordini</a></li>
+            <%} %>
             <li><a href="CondizioniReso.jsp">Condizioni di reso</a></li>
             <li><a href="Contatti.jsp">Contatti</a></li>
             <li><a href="Contatti.jsp">Dove siamo</a></li>

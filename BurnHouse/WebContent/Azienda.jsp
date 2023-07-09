@@ -64,7 +64,7 @@
              Ciò che rende speciale la nostra azienda, è senza dubbio l’amore per il lavoro che si fa. In ogni cosa va messa la 
              giusta dose d’amore, in particolare nel lavoro in un’azienda come BurnHouse, che dal 1926 si impegna a fornire prodotti 
              di alta qualità.
-             Un amore che traspare anche dallo sguardo del nostro Marco, qui mentre ha in braccio una bottiglia di Mirto 926, la 
+             Un amore che traspare anche dallo sguardo del nostro Marco, qui mentre ha in braccio una bottiglia di Gin Genesi, la 
              nostra linea speciale di alta gamma.
           </p>
           <!-- <button class="abcta-button">Learn More</button> -->
