@@ -6,6 +6,7 @@ body{
 
 
 
+
 #Checkout{
 	/*
 	display:flex;
@@ -18,6 +19,7 @@ body{
 	border: 10px solid #fff;
 	*/
 	/*max-width: 900px;*/
+	/*
     margin: 0 auto;
     padding: 20px;
     background-color: #f3f3f3;
@@ -26,27 +28,35 @@ body{
     font-weight: lighter;
     color: #2c2f48;
     margin-bottom: 20px;
+	*/
 	
+	max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3f3f3;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #2c2f48;
+  margin-bottom: 20px;
+  
 }
 
 #check{
-	font-size:40px;
-	color:blue;
-	font-weight:700;
-	text-align:center;
-	margin-top:20px;
-	margin-bottom:10px;
-	display:block;
-	
+	display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
 }
 
 #Cart{
 	width:45%;
 	heigth:100%;
-	background-image:linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
-	margin-right:100px;
+  	margin-right:100px;
 	overflow:auto;
 	border-radius:10px;
+	background-color: #f9f9f9;
 	
 }
 
@@ -103,12 +113,19 @@ body{
 }
 
 .counter{
+	/*
  width: 15%;
  display: flex;
  justify-content: space-between;
  align-items: center;
  flex-direction:column;
  font-family:'Open-sans';
+ */
+ 
+ height: 100%;
+ display:flex;
+ flex-direction:column;
+ align-items:left;
  
 }
 .count{
@@ -141,10 +158,13 @@ body{
 }
 
 .checkout{
+	
  float: right;
  margin-right: 5%;
  width: 28%;
  margin-bottom:5%;
+ 
+ 
 }
 .total{
  width: 100%;
@@ -266,7 +286,7 @@ input[type="radio"]:checked + label::after{
 }
 
 .title {
-  font-size: 36px;
+  font-size: 18px;
   font-weight: bold;
 }
 

@@ -16,6 +16,8 @@
             <h1 class="title">CHECKOUT</h1>
             <div class="line"></div>
 </div>
+
+
 <div id="Checkout">
 
 <div id="Cart">
