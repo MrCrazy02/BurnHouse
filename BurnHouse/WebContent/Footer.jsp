@@ -54,7 +54,7 @@
            <%if((adm==null || adm==false) && (use==null || use==false)){ %>
           	<li class= "selected"><a href="Access.jsp">I miei ordini</a></li>
           <%}else{ %>
-            <li><a href="ShowOrdini.jsp">I miei ordini</a></li>
+            <li><a href="CheckoutServlet?action=show">I miei ordini</a></li>
             <%} %>
             <li><a href="CondizioniReso.jsp">Condizioni di reso</a></li>
             <li><a href="Contatti.jsp">Contatti</a></li>
