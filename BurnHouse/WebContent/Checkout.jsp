@@ -40,12 +40,12 @@ for(CartProduct c: cart.GetCart()){
 				</div>
 				
 				<div class="counter">
-				<h2>Quantità</h2>
+				<h2 class= "quantita">Quantità</h2>
 				<div class="count"><%=c.GetQuantita()%></div>	
 				</div>
 				
-				<div class="prices">
-				<h2>Prezzo</h2> 
+				<div class="provaprices">
+				<h2 class= "prezzo">Prezzo</h2>
 				<div class="amount" >€<%=String.format("%.2f", c.GetPrezzo()*c.GetQuantita()) %></div>
 				</div>
 				
