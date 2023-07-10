@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.sql.Date;
-import java.util.LinkedList;
+import java.util.*;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -113,6 +113,83 @@ public class OrderDAO {
 			
 			if(utente!=null && !utente.equals("")) {
 				query.setString(1, utente);
+				
+				ResultSet res=query.executeQuery();
+				
+				while(res.next()) {
+					Orderbean ordine=new Orderbean();
+					ordine.SetCode(res.getInt("codice"));
+					ordine.SetPrice(res.getDouble("prezzo"));
+					ordine.SetInd(res.getString("ind_spedizione"));
+					ordine.SetUser(res.getString("utente"));
+					ordine.SetIVA(res.getInt("aliquota_IVA"));
+					ordine.SetDate(res.getDate("data_effettuazione"));
+					ordine.SetCarta(res.getString("num_carta"));
+					ordini.add(ordine);
+				}
+			}
+		}finally {
+			try {
+				if(query!=null)query.close();
+			}finally {
+				if(con!=null)con.close();
+			}
+		}
+		return ordini;
+	}
+	
+	public synchronized Collection<Orderbean> DoRetrieveByDate(Date dataInizio, Date dataFine)throws SQLException{
+		Connection con=null;
+		PreparedStatement query=null;
+		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
+		String quer="Select * from "+table_name+" where data_effettuazione between ? and ?";
+		
+		try {
+			con=ds.getConnection();
+			query=con.prepareStatement(quer);
+			
+			if(dataInizio!=null && dataFine!=null) {
+				query.setDate(1, dataInizio);
+				query.setDate(2, dataFine);
+				
+				ResultSet res=query.executeQuery();
+				
+				while(res.next()) {
+					Orderbean ordine=new Orderbean();
+					ordine.SetCode(res.getInt("codice"));
+					ordine.SetPrice(res.getDouble("prezzo"));
+					ordine.SetInd(res.getString("ind_spedizione"));
+					ordine.SetUser(res.getString("utente"));
+					ordine.SetIVA(res.getInt("aliquota_IVA"));
+					ordine.SetDate(res.getDate("data_effettuazione"));
+					ordine.SetCarta(res.getString("num_carta"));
+					ordini.add(ordine);
+				}
+			}
+		}finally {
+			try {
+				if(query!=null)query.close();
+			}finally {
+				if(con!=null)con.close();
+			}
+		}
+		return ordini;
+	}
+	
+	public synchronized Collection<Orderbean> DoRetrieveByDateAndUser(String utente, Date inizio, Date fine)throws SQLException{
+		Connection con=null;
+		PreparedStatement query=null;
+		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
+		String quer="Select * from "+table_name+" where data_effettuazione between ? and ? and utente = ?";
+		
+		try {
+			con=ds.getConnection();
+			query=con.prepareStatement(quer);
+			
+			if(inizio!=null && fine!=null && utente!=null && !utente.equals("")) {
+				query.setDate(1, inizio);
+				query.setDate(2, fine);
+				query.setString(3, utente);
 				
 				ResultSet res=query.executeQuery();
 				
@@ -273,4 +350,44 @@ public class OrderDAO {
 		}
 		return code;
 	}
+	
+	//Deve restituire tutti gli ordini nel database
+	public synchronized Collection<Orderbean> DoRetrieveAll() throws SQLException{
+		Connection con=null;
+		PreparedStatement query=null;
+		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
+		String quer="SELECT * FROM "+table_name;
+		try {
+			con=ds.getConnection();
+			query=con.prepareStatement(quer);
+
+				ResultSet res=query.executeQuery();
+				
+				while(res.next()) {
+					Orderbean ordine=new Orderbean();
+					ordine.SetCode(res.getInt("codice"));
+					ordine.SetPrice(res.getDouble("prezzo"));
+					ordine.SetInd(res.getString("ind_spedizione"));
+					ordine.SetUser(res.getString("utente"));
+					ordine.SetIVA(res.getInt("aliquota_IVA"));
+					ordine.SetDate(res.getDate("data_effettuazione"));
+					ordine.SetCarta(res.getString("num_carta"));
+					ordini.add(ordine);
+				}
+			
+		}finally {
+			try {
+				if(query!=null)query.close();
+			}finally {
+				if(con!=null)con.close();
+			}
+		}
+		return ordini;
+	}
+	
 }
+
+
+
+
+

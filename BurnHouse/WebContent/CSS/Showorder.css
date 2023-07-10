@@ -118,3 +118,21 @@
 	text-decoration:none;
 	color:#000000;
 }
+
+.ordini {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.ordini a {
+  text-decoration: none;
+  background-color: #751f3d;
+  color: #ffffff;
+  padding: 1% 2%;
+  border-radius: 5px;
+}
+
+.ordini a:hover {
+  background-color: #bf3364;
+}  

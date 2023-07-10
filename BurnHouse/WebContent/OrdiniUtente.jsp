@@ -1,10 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.CartProduct"%>
     
-<% 
-	Boolean AD = (Boolean)session.getAttribute("adminFilter");
-	Boolean US = (Boolean) session.getAttribute("userFilter");
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,13 +22,8 @@ $(document).ready(function(){
 </head>
 
 <body>
-<%@include file="Header.jsp" %>
 
-<%if(AD!=null && AD!=false){ %>
-<div class="ordini">
-	<a href="CheckoutServlet?action=all" target="_blank">Mostra gli ordini dei clienti</a>
-</div>
-<%} %>
+<%@include file="Header.jsp" %>
 
 <% HashMap<?,?> tutto=(HashMap<?,?>)request.getSession().getAttribute("prodorder");
   Collection<?> ordini=(Collection<?>)request.getSession().getAttribute("ordini");
@@ -50,8 +42,6 @@ $(document).ready(function(){
 		Orderbean order=(Orderbean)it.next();%>
 		<div class="headorder"><span class="acq">Acquirente: <%=order.GetUser() %>
 			</span><h3 class="number">Ordine n.<%=order.GetCode() %>
-			<br>
-			<a href="Fattura.jsp?code=<%=order.GetCode() %>&data=<%=order.GetDate()%>&nome=<%=request.getSession().getAttribute("nome")%>&cognome=<%=request.getSession().getAttribute("cognome")%>&nOrdine=<%=order.GetCode() %>">Fattura</a>
 			</h3>
 			<span class="date">Data effettuazione:<br><%=order.GetDate() %></span>
 		</div>

@@ -27,11 +27,25 @@ $(document).ready(function(){
 <body>
 <%@include file="Header.jsp" %>
 
-<%if(AD!=null && AD!=false){ %>
-<div class="ordini">
-	<a href="CheckoutServlet?action=all" target="_blank">Mostra gli ordini dei clienti</a>
-</div>
-<%} %>
+		
+		<h3>Non puoi lasciare il filtro vuoto, riprova</h3>
+
+
+		<form method="post" action="CheckoutServlet">
+				<input type="hidden" name="action" value="filter">
+				
+			 	<label for="utente">Email cliente:</label>
+			  	<input type="text" name="utente">
+			  	
+			  	<label for="datainizio">Data inizio:</label>
+			  	<input type="date" name="datainizio">
+			  	
+			  	<label for="datafine">Data fine:</label>
+			  	<input type="date" name="datafine">
+			  	
+			  	
+			  	<button type="submit">Cerca</button>	  	
+		</form>
 
 <% HashMap<?,?> tutto=(HashMap<?,?>)request.getSession().getAttribute("prodorder");
   Collection<?> ordini=(Collection<?>)request.getSession().getAttribute("ordini");
@@ -50,8 +64,6 @@ $(document).ready(function(){
 		Orderbean order=(Orderbean)it.next();%>
 		<div class="headorder"><span class="acq">Acquirente: <%=order.GetUser() %>
 			</span><h3 class="number">Ordine n.<%=order.GetCode() %>
-			<br>
-			<a href="Fattura.jsp?code=<%=order.GetCode() %>&data=<%=order.GetDate()%>&nome=<%=request.getSession().getAttribute("nome")%>&cognome=<%=request.getSession().getAttribute("cognome")%>&nOrdine=<%=order.GetCode() %>">Fattura</a>
 			</h3>
 			<span class="date">Data effettuazione:<br><%=order.GetDate() %></span>
 		</div>
