@@ -260,6 +260,10 @@ form#checkmate{
 	border-radius:10px;
 }
 
+#concludi:hover {
+  background-color: red;
+}
+
 
 input[type="radio"]:checked + label::after{
 	content:url(../Immagini/spunta-verde.png);
@@ -360,5 +364,5 @@ input[type="radio"]:checked + label::after{
 }
 
 .ins .vai:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
