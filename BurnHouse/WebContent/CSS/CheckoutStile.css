@@ -258,6 +258,7 @@ form#checkmate{
 	color:white;
 	background-color:#751f3d;
 	border-radius:10px;
+	font-size: 17px;
 }
 
 #concludi:hover {
@@ -360,7 +361,8 @@ input[type="radio"]:checked + label::after{
 
 .ins .vai {
   color: white;
-  text-decoration: none;
+  text-decoration: none; 
+  font-size: 15px;
 }
 
 .ins .vai:hover {
