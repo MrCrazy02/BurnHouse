@@ -22,9 +22,9 @@
     
     .dettagli {
 	    display: grid;
-	    justify-content: center;
-	    margin-bottom: 20px;
-	    line-height:1.5;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px; /* Aggiungi la distanza orizzontale desiderata */
+  grid-row-gap: 10px; /* Aggiungi la distanza verticale desiderata */
 	  }
 	  
 	.sinistra {
@@ -113,8 +113,47 @@ a.info:hover{
 	font-style:italic;
 }
 
+
+.title-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #F2F4F8;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: orange;
+  margin: 10px auto;
+}
     
     
     
+.rectangle {
+  width: 200px;
+  height: 20px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+}
+
+
+.contenutorect{
+	text-align: left;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+
+
+
+
+
+
+ 
     
     
