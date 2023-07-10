@@ -33,7 +33,6 @@ body{
 	width:100%;
 	heigth:100%;
   	margin-right:100px;
-	overflow:auto;
 	border-radius:10px;
 	background-color: #f9f9f9;
 	
@@ -206,32 +205,6 @@ margin-top: 1px;
  color: #202020;
 }
 
-.ins{
-  display: inline-block;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #751f3d;
-  border-radius: 4px;
-  text-decoration: none;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 12px 30px;
- 
-  transition: background-color 0.3s ease;
-}
-
-
-.vai:link{
-	text-decoration:none;
-	font-size:15px;
-	
-}
-
-.vai:visited{
-	text-decoration:none;
-	font-style:oblique;
-	color: #FFFFFF;
-}
 
 h2.riepilogo{
 	text-align:center;
@@ -250,6 +223,8 @@ h2.riepilogo{
 	font-size:20px;
 	margin:0 auto;
 	border-style:dotted;
+	margin-left: 50px;
+	margin-top: 100px;
 }
 
 input[type="radio"]{
@@ -270,7 +245,6 @@ input[type="radio"]{
 form#checkmate{
 	display:flex;
 	flex-direction:row;
-	background-image:linear-gradient(to bottom right,#FF82AB,#FFF0F5);
 	border-radius:10px;
 }
 
@@ -334,4 +308,57 @@ input[type="radio"]:checked + label::after{
 	font-family: 'Open-sans';
     color: #4488dd;
     font-size: 20px;
+}
+
+
+
+.ins {
+	/*
+  display: inline-block;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+  */
+  
+  font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 10px 20px 5px 20px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+
+.ins {
+  display: inline-block;
+  background-color: #751f3d;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 120px;
+}
+
+.ins:hover {
+  background-color: red;
+}
+
+.ins .vai {
+  color: white;
+  text-decoration: none;
+}
+
+.ins .vai:hover {
+  text-decoration: underline;
 }

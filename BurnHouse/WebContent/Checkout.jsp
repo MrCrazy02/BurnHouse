@@ -69,7 +69,6 @@ for(CartProduct c: cart.GetCart()){
 <input type="hidden" name="action" value="insert">
 
 <div class="indirizzi">
-<h2 class="riepilogo">Scegli l'indirizzo</h2>
 <% IndirizzoDAO richiesta=new IndirizzoDAO();
 	Collection<?> spedizione=richiesta.DoRetrieveByUser((String)request.getSession().getAttribute("email"));
 	if(spedizione==null || spedizione.isEmpty()){%>
@@ -87,7 +86,6 @@ for(CartProduct c: cart.GetCart()){
 
 
 <div class="Metodi">
-<h2 class="riepilogo">Scegli il metodo di pagamento</h2>
 <% PagamentoDAO richiesto=new PagamentoDAO(); 
 	Collection<Pagamento> metodi=richiesto.DoRetrieveByUser((String)request.getSession().getAttribute("email"));
 	if(metodi==null || metodi.isEmpty()){%>
