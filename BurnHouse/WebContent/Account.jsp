@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 <link rel="stylesheet" type="text/css" href="./CSS/AccountStile.css">
 
 </head>
@@ -27,10 +28,42 @@
      <div class="opzioni">
      
      <div class="collegamenti">
-		    <h3><a href="InsMetodoPag.jsp" class="info">Inserisci metodo di pagamento</a></h3>
-		    <a href="InsIndirizzo.jsp" class="info"><h3>Inserisci indirizzo di spedizione</h3></a>
-		    <a href="PagamentoControl?action=show" class="info"><h3>Visualizza Metodi di Pagamento</h3></a>
-		    <a href="IndirizziServlet?action=show" class="info"><h3>Visualizza Indirizzi di spedizione</h3></a>
+           
+            <div class="pagamento">
+                 <div class ="icona">
+                      <i class="fas fa-credit-card"></i>
+                 </div>
+                 <a href="InsMetodoPag.jsp" class="info">Inserisci metodo di pagamento</a>
+            </div>
+           
+             
+             
+             <div class="pagamento">
+                 <div class ="icona">
+                      <i class="fas fa-shipping-fast"></i>
+                 </div>
+                 <a href="InsIndirizzo.jsp" class="info">Inserisci indirizzo di spedizione</a>
+            </div>
+            
+            
+            <div class="pagamento">
+                 <div class ="icona">
+                       <i class="fab fa-cc-visa"></i> 
+                 </div>
+                 <a href="PagamentoControl?action=show" class="info">Visualizza Metodi di Pagamento</a>
+            </div>
+             
+             
+             <div class="pagamento">
+                 <div class ="icona">
+                       <i class="fas fa-map-marker-alt"></i> 
+                 </div>
+                 <a href="IndirizziServlet?action=show" class="info">Visualizza Indirizzi di spedizione</a>
+            </div>
+            
+        
+            
+		  
     	</div>
      
      </div>
