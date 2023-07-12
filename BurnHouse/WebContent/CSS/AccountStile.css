@@ -42,13 +42,13 @@
 
 	  
     .account-details {
-      margin-left:5%;
   	  margin-right:5%;
       background-color: rgb(216, 216, 216);
       border-radius: 5px;
       padding: 20px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-       height: 700px;
+      height: 700px;
+      width: 1600px;
     }
     
     .account-details h1 {
@@ -172,8 +172,19 @@ a.info:hover{
 	margin-top: 20px;
 }
 
+.allin{
+	display: flex;
+	margin-left: 5%;
+}
 
+.opzioni{
+	background-color: #ffffff;
+	border-radius: 5px;
+    border: 2px solid black;
+}
 
- 
+.corpo{
+	background-color: #F2F4F8;
+}
     
     

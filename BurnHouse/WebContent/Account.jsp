@@ -19,8 +19,28 @@
             <h1 class="title">DETTAGLI ACCOUNT</h1>
             <div class="line"></div>
 </div>
+ 
+ 
+<div class="allin">
+
+
+     <div class="opzioni">
+     
+     <div class="collegamenti">
+		    <h3><a href="InsMetodoPag.jsp" class="info">Inserisci metodo di pagamento</a></h3>
+		    <a href="InsIndirizzo.jsp" class="info"><h3>Inserisci indirizzo di spedizione</h3></a>
+		    <a href="PagamentoControl?action=show" class="info"><h3>Visualizza Metodi di Pagamento</h3></a>
+		    <a href="IndirizziServlet?action=show" class="info"><h3>Visualizza Indirizzi di spedizione</h3></a>
+    	</div>
+     
+     </div>
+     
+     
+     
+     
     <div class="account-details">
     <br>
+    
     <div class="sinistra">
     	<div class="foto">
     	    <img src="${pageContext.request.contextPath}/Immagini/profilo.png" height="180px">
@@ -67,15 +87,6 @@
            
            
       </div>   
-		 
-		 
-		 
-		 <div class="collegamenti">
-		    <h3><a href="InsMetodoPag.jsp" class="info">Inserisci metodo di pagamento</a></h3>
-		    <a href="InsIndirizzo.jsp" class="info"><h3>Inserisci indirizzo di spedizione</h3></a>
-		    <a href="PagamentoControl?action=show" class="info"><h3>Visualizza Metodi di Pagamento</h3></a>
-		    <a href="IndirizziServlet?action=show" class="info"><h3>Visualizza Indirizzi di spedizione</h3></a>
-    	</div>
     </div>
     
     
@@ -89,7 +100,7 @@
   	</div>
 </div>
   
-
+</div>
   
 </div>
 
