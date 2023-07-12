@@ -117,7 +117,6 @@ a.info:hover{
 .title-container {
   text-align: center;
   padding: 20px;
-  background-color: #F2F4F8;
 }
 
 .title {
@@ -140,17 +139,38 @@ a.info:hover{
   height: 20px;
   background-color: #f1f1f1;
   border: 1px solid #ccc;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 
 .contenutorect{
-	text-align: left;
-  margin-left: 1px;
-  margin-top: 1px;
+  text-align: left;
+  margin-left: 4px;
+  margin-top: 2px;
+  color: #495057;
+}
+
+.nome h2{
+	font-size: 19px;
+}
+
+.cognome h2{
+	font-size: 19px;
+}
+
+.email h2{
+	font-size: 19px;
+}
+
+.datanascita h2{
+	font-size: 19px;
 }
 
 
-
+.collegamenti{
+	margin-top: 20px;
+}
 
 
 
