@@ -27,6 +27,36 @@ $(document).ready(function(){
 <body>
 <%@include file="Header.jsp" %>
 <div class="contenitor">
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+	  $("#menu").hide(); // Nasconde il menu all'avvio
+    $(".nav-container").click(function(){
+      $("#menu").slideToggle();
+    }); 
+  });
+
+
+</script>
+
+<!-- eventuale chiusura </head>, apertura <body> -->
+<div class="totole">
+ <div class="nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+        </div>
+
+
+<div id="menu">
+  <div class="prova">
+     
+
+
 		<form method="post" action="CheckoutServlet">
 				<input type="hidden" name="action" value="filter">
 				
@@ -42,7 +72,8 @@ $(document).ready(function(){
 			  	
 			  	<button type="submit">Cerca</button>	  	
 		</form>
-
+</div>
+</div>
 <% HashMap<?,?> tutto=(HashMap<?,?>)request.getSession().getAttribute("prodorder");
   Collection<?> ordini=(Collection<?>)request.getSession().getAttribute("ordini");
   
