@@ -74,6 +74,7 @@ for(CartProduct c: cart.GetCart()){
 	if(spedizione==null || spedizione.isEmpty()){%>
 	<button class="ins"><a href="InsIndirizzo.jsp" class="vai">Inserisci indirizzo di spedizione</a></button>
 	<%}else{ 
+	%><div class=IHead>Indirizzi di spedizione</div> <% 	
 	Iterator it=spedizione.iterator();
 	while(it.hasNext()){
 	IndirizzoBean ind=(IndirizzoBean)it.next();%>
@@ -81,7 +82,6 @@ for(CartProduct c: cart.GetCart()){
 	<input type="radio" name="via" value="<%=ind.GetVia() %>" required class="ind"><label for="via" id="rue"><%=ind.GetVia() %><br><%=ind.GetCitta() %></label>
 	</div>
 	<%}} %>
-
 </div>
 
 
@@ -91,6 +91,7 @@ for(CartProduct c: cart.GetCart()){
 	if(metodi==null || metodi.isEmpty()){%>
 <button class="ins"><a href="InsMetodoPag.jsp" class="vai">Inserisci metodo di pagamento</a></button>
 <%}else{
+	%><div class=MHead>Metodi di pagamento</div> <% 
 	Iterator i=metodi.iterator();
 	while(i.hasNext()){
 	Pagamento carta=(Pagamento)i.next();%>
