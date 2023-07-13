@@ -9,6 +9,8 @@
 <title>Ordini effettuati</title>
 <link rel="stylesheet" type="text/css" href="./CSS/Showorder.css">
 <script src="./script/jquery-3.5.1.js" type="text/javascript">
+
+
 </script>
 <script>
 $(document).ready(function(){
@@ -107,6 +109,7 @@ $(document).ready(function(){
 <footer>
 <%@include file="Footer.jsp" %>
 </footer>
+
 
 
 </body>

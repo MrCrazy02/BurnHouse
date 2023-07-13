@@ -9,14 +9,16 @@
 #riempi{
 	text-align:center;
 	font-size:30px;
-	margin-top:10px;
 }
+
 
 #compra{
 	display:block;
 	margin:10px auto 0 auto;
-	font-size:30px;
+	font-size:25px;
 	background-color:#751f3d;
+	margin-top: 20px;
+	color: #ffffff;
 }
 
 
@@ -111,12 +113,12 @@
 
 .ordercont a:link, #compra a:link{
 	text-decoration:none;
-	color:#000000;
+	color:#ffffff;
 }
 
 .ordercont a:visited, #compra a:visited{
 	text-decoration:none;
-	color:#000000;
+	color:#ffffff;
 }
 
 .ordini {
@@ -170,7 +172,7 @@ body{
 .container{
 	display: flex;
 	justify-content: center;
-	height: 400px;
+	height: 376px;
 	margin-top: 40px;
 }
 
@@ -233,3 +235,4 @@ body{
         top: -10%;
     }
 }
+

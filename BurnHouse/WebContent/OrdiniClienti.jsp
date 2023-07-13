@@ -10,7 +10,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Ordini effettuati</title>
-<link rel="stylesheet" type="text/css" href="./CSS/Showorder.css">
+<link rel="stylesheet" type="text/css" href="./CSS/Showcliente.css">
 <script src="./script/jquery-3.5.1.js" type="text/javascript">
 </script>
 <script>
@@ -26,7 +26,7 @@ $(document).ready(function(){
 
 <body>
 <%@include file="Header.jsp" %>
-
+<div class="contenitor">
 		<form method="post" action="CheckoutServlet">
 				<input type="hidden" name="action" value="filter">
 				
@@ -47,9 +47,11 @@ $(document).ready(function(){
   Collection<?> ordini=(Collection<?>)request.getSession().getAttribute("ordini");
   
   if((ordini==null || ordini.isEmpty())||(tutto==null || tutto.isEmpty())){%>
-	  <img src="./Immagini/bottevuota.jpg" alt="immagine non disponibile" id="vuoto">
+      <div class="container">
+		<div class="water"></div>
+      </div>
 	  <h1 id="riempi">La tua botte è vuota</h1>
-	  <button id="compra"><a href="ProductView.jsp">Riempila</a></button>
+	  <button id="compra"><a href="ProductView.jsp">Riempila</a></button>	
   <%}
   
   else{ %>
@@ -96,6 +98,7 @@ $(document).ready(function(){
 		</div>
 		<%}} %>
 	</div>
+</div>
 <footer>
 <%@include file="Footer.jsp" %>
 </footer>
