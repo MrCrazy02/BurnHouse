@@ -25,13 +25,36 @@ $(document).ready(function(){
 
 <%@include file="Header.jsp" %>
 
+<div class="contenitor">
+
+   <!--  di prova da qui-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <% HashMap<?,?> tutto=(HashMap<?,?>)request.getSession().getAttribute("prodorder");
   Collection<?> ordini=(Collection<?>)request.getSession().getAttribute("ordini");
   
   if((ordini==null || ordini.isEmpty())||(tutto==null || tutto.isEmpty())){%>
-	  <img src="./Immagini/bottevuota.jpg" alt="immagine non disponibile" id="vuoto">
+      <div class="container">
+		<div class="water"></div>
+      </div>
 	  <h1 id="riempi">La tua botte è vuota</h1>
-	  <button id="compra"><a href="ProductView.jsp">Riempila</a></button>
+	  <button id="compra"><a href="ProductView.jsp">Riempila</a></button>	  
   <%}
   
   else{ %>
@@ -78,8 +101,13 @@ $(document).ready(function(){
 		</div>
 		<%}} %>
 	</div>
+	
+</div>
+
 <footer>
 <%@include file="Footer.jsp" %>
 </footer>
+
+
 </body>
 </html>
